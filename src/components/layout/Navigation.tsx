@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { Navigation as NavIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function Navigation() {
@@ -40,33 +39,23 @@ export default function Navigation() {
       <div className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] hidden md:block">
         <nav
           className={cn(
-            'flex items-center overflow-hidden rounded-full border shadow-lg h-12',
+            'flex items-center rounded-full border shadow-sm px-2 h-14',
             'border-[rgba(96,121,132,0.15)]',
-            'bg-[rgba(255,253,248,0.88)] backdrop-blur-md'
+            'bg-[rgba(255,255,255,0.95)] backdrop-blur-md'
           )}
         >
-          {/* Logo / Brand icon */}
-          <div className="flex-shrink-0 flex items-center font-semibold pl-4 pr-2">
-            <NavIcon
-              className="h-5 w-5"
-              style={{ color: 'var(--terracotta)' }}
-            />
+          {/* Logo / Brand text */}
+          <div className="flex-shrink-0 flex items-center font-semibold pl-4 pr-6">
             <span
-              className="ml-2 text-xs font-mono uppercase tracking-widest"
-              style={{ color: 'var(--steel)' }}
+              className="text-xs font-mono uppercase tracking-[0.2em]"
+              style={{ color: '#8892b0' }}
             >
-              Dr. D. M. Mate
+              DR. D. M. MATE
             </span>
           </div>
 
-          {/* Separator */}
-          <div
-            className="h-5 w-px mx-1 flex-shrink-0"
-            style={{ background: 'rgba(96,121,132,0.20)' }}
-          />
-
           {/* Nav links */}
-          <div className="flex items-center gap-1 pr-3">
+          <div className="flex items-center gap-2 pr-2">
             {links.map((l) => (
               <a
                 key={l.id}
@@ -76,11 +65,16 @@ export default function Navigation() {
                   setActive(l.id);
                 }}
                 className={cn(
-                  'text-sm font-medium transition-colors px-3 py-1 rounded-full whitespace-nowrap',
+                  'text-[13px] font-medium transition-all px-4 py-2 rounded-full whitespace-nowrap',
                   active === l.id
-                    ? 'text-white bg-[var(--terracotta)]'
-                    : 'text-[var(--graphite)] hover:text-[var(--terracotta)] hover:bg-[rgba(201,106,69,0.08)]'
+                    ? 'text-white'
+                    : 'text-[var(--graphite)] hover:text-[var(--terracotta)] hover:bg-[rgba(201,106,69,0.05)]'
                 )}
+                style={
+                  active === l.id
+                    ? { backgroundColor: 'var(--terracotta)' }
+                    : {}
+                }
               >
                 {l.label}
               </a>
