@@ -1,0 +1,41 @@
+export const profile = {
+  name: "Dr. Dnyaneshwar M. Mate",
+  shortName: "Dr. D. M. Mate",
+  title: "Associate Professor",
+  department: "Department of Mechanical Engineering",
+  institution: "JSPM's Rajarshi Shahu College of Engineering",
+  location: "Tathawade, Pune — 411033",
+  email: "dmmatepatil@gmail.com",
+  phone: "+91 98234 48609",
+  objective:
+    "I want to be a part of a learning organisation which values professionalism and commitment to perform, offering responsibilities and opportunities for growth where I can make the most of my skills and knowledge — with sincerity, credibility, and a drive to be part of the solution.",
+  keyStrengths: [
+    "Published Patent",
+    "Total 20+ Years of Experience",
+    "Published Four Books",
+    "Papers Published with Citation H & I Index",
+    "Proven ability to work well in Team Environment",
+    "Editorial Board and Reviewer Member on peer-reviewed journals",
+    "Honored as Reviewer — Fifth International Conference on Mechanical, Electric and Industrial Engineering, Sanya, China, May 2022",
+  ],
+  stats: [
+    { number: "20+", label: "Years of Experience" },
+    { number: "40+", label: "Research Publications*" },
+    { number: "4",   label: "Books Published" },
+    { number: "2",   label: "Patent / IP Entries" },
+    { number: "27",  label: "UG Batches Guided" },
+    { number: "23",  label: "PG Projects Guided" },
+  ],
+  statsNote:
+    "* Publication totals vary between sections of the CV (39 or 47 depending on the counting method). '40+' reflects a conservative combined count.",
+  researchThemes: [
+    "Manufacturing & Machining",
+    "Surface Engineering",
+    "Material Science",
+    "Heat Transfer",
+    "CFD & Simulation",
+    "Mechanical Design",
+    "Renewable Energy",
+    "Thermal Engineering",
+  ],
+};
