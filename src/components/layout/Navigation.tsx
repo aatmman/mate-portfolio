@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { cn } from '@/lib/utils';
 
 export default function Navigation() {
   const [active, setActive] = useState('home');
@@ -36,49 +35,93 @@ export default function Navigation() {
   return (
     <>
       {/* Desktop — static pill nav */}
-      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] hidden md:block">
+      <div 
+        className="nav-desktop-container"
+        style={{
+          position: 'fixed',
+          top: '1.5rem',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 100,
+        }}
+      >
         <nav
-          className={cn(
-            'flex items-center rounded-full border shadow-sm px-2 h-14',
-            'border-[rgba(96,121,132,0.15)]',
-            'bg-[rgba(255,255,255,0.95)] backdrop-blur-md'
-          )}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            backgroundColor: 'rgba(255, 255, 255, 0.95)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            borderRadius: '9999px',
+            border: '1px solid rgba(96,121,132,0.15)',
+            boxShadow: '0 1px 3px rgba(38, 50, 56, 0.1)',
+            height: '3.5rem',
+            padding: '0 0.5rem',
+          }}
         >
           {/* Logo / Brand text */}
-          <div className="flex-shrink-0 flex items-center font-semibold pl-4 pr-6">
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            paddingLeft: '1rem',
+            paddingRight: '1.5rem',
+            flexShrink: 0
+          }}>
             <span
-              className="text-xs font-mono uppercase tracking-[0.2em]"
-              style={{ color: '#8892b0' }}
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.75rem',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.2em',
+                color: '#8892b0'
+              }}
             >
               DR. D. M. MATE
             </span>
           </div>
 
           {/* Nav links */}
-          <div className="flex items-center gap-2 pr-2">
-            {links.map((l) => (
-              <a
-                key={l.id}
-                href={`#${l.id}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActive(l.id);
-                }}
-                className={cn(
-                  'text-[13px] font-medium transition-all px-4 py-2 rounded-full whitespace-nowrap',
-                  active === l.id
-                    ? 'text-white'
-                    : 'text-[var(--graphite)] hover:text-[var(--terracotta)] hover:bg-[rgba(201,106,69,0.05)]'
-                )}
-                style={
-                  active === l.id
-                    ? { backgroundColor: 'var(--terracotta)' }
-                    : {}
-                }
-              >
-                {l.label}
-              </a>
-            ))}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            {links.map((l) => {
+              const isActive = active === l.id;
+              return (
+                <a
+                  key={l.id}
+                  href={`#${l.id}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActive(l.id);
+                  }}
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '13px',
+                    fontWeight: 500,
+                    textDecoration: 'none',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '9999px',
+                    whiteSpace: 'nowrap',
+                    transition: 'all 0.2s ease',
+                    color: isActive ? '#ffffff' : 'var(--graphite)',
+                    backgroundColor: isActive ? 'var(--terracotta)' : 'transparent',
+                  }}
+                  onMouseOver={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.color = 'var(--terracotta)';
+                      e.currentTarget.style.backgroundColor = 'rgba(201,106,69,0.05)';
+                    }
+                  }}
+                  onMouseOut={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.color = 'var(--graphite)';
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }
+                  }}
+                >
+                  {l.label}
+                </a>
+              );
+            })}
           </div>
         </nav>
       </div>
@@ -97,6 +140,14 @@ export default function Navigation() {
           </a>
         ))}
       </nav>
+
+      <style jsx>{`
+        @media (max-width: 900px) {
+          .nav-desktop-container {
+            display: none !important;
+          }
+        }
+      `}</style>
     </>
   );
 }
