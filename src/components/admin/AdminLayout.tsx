@@ -2,7 +2,7 @@
 import { ReactNode, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { Menu, X, Bell, Moon, Sun, HelpCircle, UserCog, LogOut } from '@/components/ui/Icons';
+import { Menu, X, ExternalLink, Settings, UserCog, LogOut } from '@/components/ui/Icons';
 import AdminSidebar from './AdminSidebar';
 
 interface AdminLayoutProps {
@@ -14,7 +14,6 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
 
   // Auto-close mobile sidebar on route change
@@ -25,23 +24,11 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
 
   // Load preferences from localStorage
   useEffect(() => {
-    const savedDark = localStorage.getItem('admin-dark-mode');
-    if (savedDark) {
-      setDarkMode(savedDark === 'true');
-      document.documentElement.classList.toggle('dark', savedDark === 'true');
-    }
     const savedCollapsed = localStorage.getItem('admin-sidebar-collapsed');
     if (savedCollapsed) {
       setSidebarCollapsed(savedCollapsed === 'true');
     }
   }, []);
-
-  const toggleDarkMode = () => {
-    const newMode = !darkMode;
-    setDarkMode(newMode);
-    localStorage.setItem('admin-dark-mode', String(newMode));
-    document.documentElement.classList.toggle('dark', newMode);
-  };
 
   const toggleSidebarCollapse = () => {
     const next = !sidebarCollapsed;
@@ -82,12 +69,8 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           </div>
           
           <div className="header-actions">
-            <button className="icon-btn" onClick={toggleDarkMode} aria-label="Toggle dark mode" title="Toggle dark mode">
-              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-
             <Link href="/" target="_blank" className="icon-btn" title="View live portfolio site" aria-label="View live website">
-              <HelpCircle className="w-5 h-5" />
+              <ExternalLink className="w-5 h-5" />
             </Link>
             
             <div className="user-menu-wrapper">
@@ -110,7 +93,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                     Profile Details
                   </Link>
                   <Link href="/admin/settings" className="dropdown-item" onClick={() => setShowUserMenu(false)}>
-                    <HelpCircle className="w-4 h-4" />
+                    <Settings className="w-4 h-4" />
                     Settings &amp; Backup
                   </Link>
                   <hr />
