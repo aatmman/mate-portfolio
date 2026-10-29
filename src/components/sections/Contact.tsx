@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { Mail, Copy, Check, ExternalLink } from '@/components/ui/Icons';
+import { Mail, Phone, Copy, Check } from '@/components/ui/Icons';
 import { profile as defaultProfile } from '@/data/profile';
 
 export default function Contact({ profileData }: { profileData?: typeof defaultProfile } = {}) {
@@ -11,6 +11,8 @@ export default function Contact({ profileData }: { profileData?: typeof defaultP
   const subject = encodeURIComponent(`Academic Inquiry — Dr. Dnyaneshwar M. Mate`);
   const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(p.email)}&su=${subject}`;
   const desktopMailtoUrl = `mailto:${p.email}?subject=${subject}`;
+  const outlookWebUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=${encodeURIComponent(p.email)}&subject=${subject}`;
+  const yahooWebUrl = `https://compose.mail.yahoo.com/?to=${encodeURIComponent(p.email)}&subject=${subject}`;
 
   const handleCopy = async () => {
     try {
@@ -18,7 +20,6 @@ export default function Contact({ profileData }: { profileData?: typeof defaultP
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
-      // Fallback
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     }
@@ -90,7 +91,7 @@ export default function Contact({ profileData }: { profileData?: typeof defaultP
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     margin: '0 auto 0.75rem',
                   }}>
-                    <span style={{ fontSize: '1.25rem' }}>☎</span>
+                    <Phone className="w-5 h-5 text-steel" />
                   </div>
                   <p className="t-meta" style={{ color: 'var(--brass)', marginBottom: '0.25rem' }}>Phone</p>
                   <a
@@ -108,43 +109,81 @@ export default function Contact({ profileData }: { profileData?: typeof defaultP
               </div>
 
               {/* Email Action Area */}
-              <div style={{ marginTop: '2rem', paddingTop: '1.75rem', borderTop: '1px dashed rgba(180,154,103,0.25)', textAlign: 'center' }}>
-                <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: '0.85rem' }}>
-                  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <div style={{ marginTop: '2.5rem', paddingTop: '2rem', borderTop: '1px dashed rgba(180,154,103,0.3)', textAlign: 'center' }}>
+                <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', maxWidth: 540, width: '100%', margin: '0 auto' }}>
+                  {/* Primary Buttons */}
+                  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
                     <a
                       href={gmailComposeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-primary"
-                      style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
-                      title="Open Gmail compose tab in browser"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.6rem',
+                        padding: '0.85rem 1.75rem',
+                        fontSize: '0.92rem',
+                        fontWeight: 600,
+                      }}
+                      title="Open Gmail directly in your browser tab (no desktop app required)"
                     >
                       <Mail className="w-4 h-4" />
-                      Send via Gmail (Browser)
+                      Send an Email
                     </a>
 
                     <button
                       type="button"
                       onClick={handleCopy}
                       className="btn btn-secondary"
-                      style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
-                      title="Copy email to clipboard"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        padding: '0.85rem 1.4rem',
+                        fontSize: '0.9rem',
+                      }}
+                      title="Copy email address to clipboard"
                     >
                       {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
-                      {copied ? 'Email Copied!' : 'Copy Email'}
+                      {copied ? 'Copied to Clipboard!' : 'Copy Address'}
                     </button>
                   </div>
 
-                  <p style={{ fontSize: '0.78rem', color: 'var(--steel)', margin: 0 }}>
-                    Prefer your desktop mail app?{' '}
-                    <a
-                      href={desktopMailtoUrl}
-                      style={{ color: 'var(--terracotta)', fontWeight: 500, textDecoration: 'underline' }}
-                      title="Open in default desktop email app (Outlook / Apple Mail)"
-                    >
-                      Open in Desktop Client (Outlook / Mail)
-                    </a>
-                  </p>
+                  {/* Desktop App & Alternative Webmail Box */}
+                  <div style={{
+                    background: 'rgba(96,121,132,0.06)',
+                    border: '1px solid rgba(96,121,132,0.18)',
+                    borderRadius: '8px',
+                    padding: '0.75rem 1.25rem',
+                    fontSize: '0.78rem',
+                    color: 'var(--steel)',
+                    lineHeight: 1.6,
+                    width: '100%',
+                    textAlign: 'center',
+                  }}>
+                    <div>
+                      <span style={{ color: 'var(--graphite)', fontWeight: 600 }}>Default:</span> Opens in <strong>Chrome / Browser (Gmail)</strong> where you are logged in.
+                    </div>
+                    <div style={{ marginTop: '0.35rem', paddingTop: '0.35rem', borderTop: '1px dashed rgba(96,121,132,0.15)', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '0.5rem 1rem' }}>
+                      <span>
+                        Prefer your desktop app?{' '}
+                        <a
+                          href={desktopMailtoUrl}
+                          style={{ color: 'var(--terracotta)', fontWeight: 600, textDecoration: 'underline' }}
+                          title="Open in your default desktop email app (Outlook / Apple Mail)"
+                        >
+                          Open in Desktop Client (Outlook / Mail)
+                        </a>
+                      </span>
+                      <span style={{ opacity: 0.4 }}>•</span>
+                      <span>
+                        Other webmail:{' '}
+                        <a href={outlookWebUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--graphite)', textDecoration: 'underline', marginRight: '0.5rem' }}>Outlook.com</a>
+                        <a href={yahooWebUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--graphite)', textDecoration: 'underline' }}>Yahoo Mail</a>
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
