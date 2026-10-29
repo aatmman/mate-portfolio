@@ -1,6 +1,9 @@
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import { profile as defaultProfile } from '@/data/profile';
 
-export default function CurrentPosition() {
+export default function CurrentPosition({ profileData }: { profileData?: typeof defaultProfile }) {
+  const p = profileData || defaultProfile;
+
   return (
     <section className="section section-blueprint" style={{ padding: '4rem 0' }}>
       <div className="section-inner">
@@ -8,15 +11,15 @@ export default function CurrentPosition() {
           <ScrollReveal>
             <p className="t-label" style={{ marginBottom: '0.75rem' }}>Currently Serving</p>
             <p style={{ fontFamily: 'var(--font-editorial)', fontSize: 'clamp(1.4rem, 3vw, 2rem)', color: 'var(--graphite)', lineHeight: 1.2, marginBottom: '0.35rem' }}>
-              Associate Professor
+              {p.title}
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontWeight: 500, color: 'var(--steel)', fontSize: '1rem', marginBottom: '0.25rem' }}>
-              Department of Mechanical Engineering
+              {p.department}
             </p>
             <p style={{ fontFamily: 'var(--font-editorial)', fontSize: 'clamp(1.1rem, 2.5vw, 1.45rem)', color: 'var(--graphite)', marginBottom: '0.25rem' }}>
-              JSPM&apos;s Rajarshi Shahu College of Engineering
+              {p.institution}
             </p>
-            <p className="t-small">Tathawade, Pune — 411033, Maharashtra, India</p>
+            <p className="t-small">{p.location}, Maharashtra, India</p>
           </ScrollReveal>
 
           {/* Subtle engineering graphic */}

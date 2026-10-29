@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="mateTerracotta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4734D" />
+      <stop offset="100%" stop-color="#B25532" />
+    </linearGradient>
+  </defs>
+  <!-- Background with editorial rounded corners -->
+  <rect width="64" height="64" rx="14" fill="url(#mateTerracotta)" />
+  
+  <!-- Subtle technical inner border -->
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.25" />
+  
+  <!-- Academic Faculty Monogram "DM" -->
+  <text 
+    x="32" 
+    y="44" 
+    font-family="'DM Serif Display', Georgia, 'Times New Roman', serif" 
+    font-size="29" 
+    font-weight="bold" 
+    fill="#FFFDF8" 
+    text-anchor="middle" 
+    letter-spacing="-0.5"
+  >DM</text>
+  
+  <!-- Subtle mechanical precision accent dot -->
+  <circle cx="32" cy="11.5" r="2.5" fill="#FFE8DF" />
+</svg>

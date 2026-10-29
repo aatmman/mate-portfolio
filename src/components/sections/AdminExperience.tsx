@@ -1,7 +1,16 @@
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { adminExperience, academicContributions } from '@/data/experience';
+import { adminExperience as defaultAdmin, academicContributions as defaultContrib } from '@/data/experience';
 
-export default function AdminExperience() {
+export default function AdminExperience({ 
+  adminData, 
+  contribData 
+}: { 
+  adminData?: typeof defaultAdmin; 
+  contribData?: typeof defaultContrib; 
+}) {
+  const roles = adminData || defaultAdmin;
+  const contributions = contribData || defaultContrib;
+
   return (
     <div>
       {/* Administrative Experience */}
@@ -12,7 +21,7 @@ export default function AdminExperience() {
       </ScrollReveal>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.25rem', marginTop: '2rem' }}>
-        {adminExperience.map((role, i) => (
+        {roles.map((role, i) => (
           <ScrollReveal key={role.id} delay={(Math.min(i, 4) as 0|1|2|3|4)}>
             <div className="paper paper-lift" style={{ padding: '1.5rem', height: '100%', borderTop: '3px solid var(--brass)' }}>
               <div className="blueprint-corner blueprint-corner--tl" />
@@ -44,7 +53,7 @@ export default function AdminExperience() {
           gap: '1rem',
           marginTop: '1.75rem',
         }}>
-          {academicContributions.map((c, i) => (
+          {contributions.map((c, i) => (
             <ScrollReveal key={c.id} delay={(Math.min(i % 4, 3) as 0|1|2|3)}>
               <div className="journal-card" style={{ height: '100%' }}>
                 <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '0.9rem', color: 'var(--graphite)', marginBottom: '0.35rem' }}>

@@ -1,37 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { requireAdmin } from '@/lib/auth';
+import { getSession } from '@/lib/auth';
 import { 
-  getAll, getById, create, update, remove, reorder, bulkImport 
+  getAll, getById, create, update, remove, reorder, bulkImport, loadStore, resetStore 
 } from '@/lib/content';
 
 const VALID_COLLECTIONS = [
-  'profile', 'education', 'experience', 'patents', 'researchGrant', 
-  'consultancy', 'books', 'publications', 'conferencePapers', 'courses',
-  'awards', 'memberships', 'editorialRoles', 'conferencesOrganized', 
-  'extraCurricular', 'students', 'researchThemes'
+  'profile', 'education', 'experience', 'adminExperience', 'academicContributions', 
+  'patents', 'researchGrant', 'consultancy', 'books', 'publications', 
+  'conferencePapers', 'courses', 'awards', 'memberships', 'editorialRoles', 
+  'conferencesOrganized', 'extraCurricular', 'students', 'researchThemes', 'all'
 ];
 
-function getCollectionFilename(collection: string): string {
-  const map: Record<string, string> = {
-    profile: 'profile.ts',
-    education: 'education.ts',
-    experience: 'experience.ts',
-    patents: 'patents.ts',
-    researchGrant: 'patents.ts',
-    consultancy: 'patents.ts',
-    books: 'achievements.ts',
-    publications: 'publications.ts',
-    conferencePapers: 'publications.ts',
-    courses: 'courses.ts',
-    awards: 'achievements.ts',
-    memberships: 'achievements.ts',
-    editorialRoles: 'achievements.ts',
-    conferencesOrganized: 'achievements.ts',
-    extraCurricular: 'achievements.ts',
-    students: 'achievements.ts',
-    researchThemes: 'profile.ts',
-  };
-  return map[collection] || `${collection}.ts`;
+async function checkAuth(): Promise<boolean> {
+  const session = await getSession();
+  return Boolean(session && session.role === 'admin');
 }
 
 export async function GET(
@@ -39,7 +21,11 @@ export async function GET(
   { params }: { params: Promise<{ collection: string }> }
 ) {
   try {
-    await requireAdmin();
+    const isAuthed = await checkAuth();
+    if (!isAuthed) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const { collection } = await params;
     const searchParams = request.nextUrl.searchParams;
     
@@ -47,22 +33,26 @@ export async function GET(
       return NextResponse.json({ error: 'Invalid collection' }, { status: 400 });
     }
 
+    if (collection === 'all') {
+      const store = await loadStore();
+      return NextResponse.json(store);
+    }
+
     const id = searchParams.get('id');
-    const filename = getCollectionFilename(collection);
     
     if (id) {
-      const item = await getById(filename, id);
+      const item = await getById(collection, id);
       if (!item) {
         return NextResponse.json({ error: 'Not found' }, { status: 404 });
       }
       return NextResponse.json(item);
     }
     
-    const items = await getAll(filename);
+    const items = await getAll(collection);
     return NextResponse.json(items);
   } catch (error) {
-    if (error instanceof Response) throw error;
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    console.error('API GET error:', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
 
@@ -71,7 +61,11 @@ export async function POST(
   { params }: { params: Promise<{ collection: string }> }
 ) {
   try {
-    await requireAdmin();
+    const isAuthed = await checkAuth();
+    if (!isAuthed) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const { collection } = await params;
     
     if (!VALID_COLLECTIONS.includes(collection)) {
@@ -80,23 +74,27 @@ export async function POST(
 
     const body = await request.json();
     const { action, data, items } = body;
-    const filename = getCollectionFilename(collection);
+
+    if (action === 'reset') {
+      const restored = await resetStore();
+      return NextResponse.json({ success: true, store: restored });
+    }
     
     if (action === 'bulkImport' && items) {
-      const result = await bulkImport(filename, items);
+      const result = await bulkImport(collection, items);
       return NextResponse.json(result);
     }
     
     if (action === 'reorder' && items) {
-      await reorder(filename, items);
+      await reorder(collection, items);
       return NextResponse.json({ success: true });
     }
     
-    const newItem = await create(filename, data);
+    const newItem = await create(collection, data || body);
     return NextResponse.json(newItem, { status: 201 });
   } catch (error) {
-    if (error instanceof Response) throw error;
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    console.error('API POST error:', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
 
@@ -105,7 +103,11 @@ export async function PUT(
   { params }: { params: Promise<{ collection: string }> }
 ) {
   try {
-    await requireAdmin();
+    const isAuthed = await checkAuth();
+    if (!isAuthed) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const { collection } = await params;
     
     if (!VALID_COLLECTIONS.includes(collection)) {
@@ -113,22 +115,22 @@ export async function PUT(
     }
 
     const body = await request.json();
-    const { id, ...updates } = body;
-    const filename = getCollectionFilename(collection);
+    const id = body.id || (collection === 'profile' ? 'profile-main' : collection === 'researchGrant' ? 'grant-aicte' : undefined);
     
     if (!id) {
       return NextResponse.json({ error: 'ID is required' }, { status: 400 });
     }
-    
-    const updated = await update(filename, id, updates);
+
+    const { id: _, ...updates } = body;
+    const updated = await update(collection, id, updates);
     if (!updated) {
       return NextResponse.json({ error: 'Not found' }, { status: 404 });
     }
     
     return NextResponse.json(updated);
   } catch (error) {
-    if (error instanceof Response) throw error;
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    console.error('API PUT error:', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
 
@@ -137,7 +139,11 @@ export async function DELETE(
   { params }: { params: Promise<{ collection: string }> }
 ) {
   try {
-    await requireAdmin();
+    const isAuthed = await checkAuth();
+    if (!isAuthed) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const { collection } = await params;
     const searchParams = request.nextUrl.searchParams;
     const id = searchParams.get('id');
@@ -149,9 +155,8 @@ export async function DELETE(
     if (!id) {
       return NextResponse.json({ error: 'ID is required' }, { status: 400 });
     }
-    
-    const filename = getCollectionFilename(collection);
-    const deleted = await remove(filename, id);
+
+    const deleted = await remove(collection, id);
     
     if (!deleted) {
       return NextResponse.json({ error: 'Not found' }, { status: 404 });
@@ -159,7 +164,7 @@ export async function DELETE(
     
     return NextResponse.json({ success: true });
   } catch (error) {
-    if (error instanceof Response) throw error;
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    console.error('API DELETE error:', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }

@@ -1,14 +1,14 @@
 'use client';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Shield, Eye, EyeOff, AlertCircle, Loader2 } from '@/components/ui/Icons';
 
-export default function AdminLoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const isLogout = searchParams.get('logout') === 'true';
   
-  const [email, setEmail] = useState('admin@dnyaneshwarmate.com');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -24,13 +24,13 @@ export default function AdminLoginPage() {
       const res = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
       });
 
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error || 'Login failed');
+        setError(data.error || 'Invalid username or password');
         setLoading(false);
         return;
       }
@@ -41,7 +41,7 @@ export default function AdminLoginPage() {
         router.refresh();
       }, 500);
     } catch {
-      setError('An error occurred. Please try again.');
+      setError('An unexpected error occurred. Please try again.');
       setLoading(false);
     }
   };
@@ -52,42 +52,44 @@ export default function AdminLoginPage() {
         <div className="login-card">
           <div className="login-header">
             <div className="login-brand">
-              <Shield className="w-10 h-10 text-terracotta" />
+              <Shield className="w-8 h-8 text-white" />
             </div>
-            <h1>Admin Portal</h1>
-            <p>Sign in to manage the portfolio</p>
+            <h1>Faculty Portal</h1>
+            <p>Dr. Dnyaneshwar M. Mate — Portfolio Management</p>
           </div>
 
           {isLogout && (
             <div className="alert alert-success">
-              You have been logged out successfully.
+              You have been logged out securely.
             </div>
           )}
 
           {success && (
             <div className="alert alert-success">
-              Login successful! Redirecting...
+              Authentication successful! Redirecting to dashboard...
             </div>
           )}
 
           {error && (
             <div className="alert alert-error">
-              <AlertCircle className="w-4 h-4" />
-              {error}
+              <AlertCircle className="w-4 h-4 flex-shrink-0" />
+              <span>{error}</span>
             </div>
           )}
 
           <form onSubmit={handleSubmit} className="login-form">
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="username">Username</label>
               <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                id="username"
+                placeholder="Enter username (e.g. drmate)"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 required
                 disabled={loading}
-                autoComplete="email"
+                autoComplete="username"
+                autoFocus
               />
             </div>
 
@@ -99,6 +101,7 @@ export default function AdminLoginPage() {
                 <input
                   type={showPassword ? 'text' : 'password'}
                   id="password"
+                  placeholder="Enter your secure password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -120,18 +123,22 @@ export default function AdminLoginPage() {
               {loading ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  Signing in...
+                  Authenticating...
                 </>
               ) : (
-                'Sign In'
+                'Sign In to Dashboard'
               )}
             </button>
           </form>
 
           <div className="login-footer">
-            <p className="demo-credentials">
-              <strong>Demo:</strong> admin@dnyaneshwarmate.com / Mate@2024!Admin
-            </p>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', color: 'var(--steel)', fontSize: '0.78rem', marginBottom: '0.75rem' }}>
+              <Shield className="w-4 h-4" style={{ color: '#059669' }} />
+              <span>256-Bit Encrypted Session • Authorized Personnel Only</span>
+            </div>
+            <a href="/" style={{ fontSize: '0.8rem', color: 'var(--terracotta)', textDecoration: 'none', fontWeight: 500 }}>
+              ← Return to Public Portfolio
+            </a>
           </div>
         </div>
 
@@ -159,5 +166,21 @@ export default function AdminLoginPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function AdminLoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="login-page">
+        <div className="login-container">
+          <div className="login-card" style={{ padding: '2rem', textAlign: 'center' }}>
+            <p>Loading Admin Portal...</p>
+          </div>
+        </div>
+      </div>
+    }>
+      <LoginForm />
+    </Suspense>
   );
 }

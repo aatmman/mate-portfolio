@@ -1,0 +1,1838 @@
+{
+  "profile": [
+    {
+      "id": "profile-main",
+      "name": "Dr. Dnyaneshwar M. Mate",
+      "shortName": "Dr. D. M. Mate",
+      "title": "Associate Professor",
+      "department": "Department of Mechanical Engineering",
+      "institution": "JSPM's Rajarshi Shahu College of Engineering",
+      "location": "Tathawade, Pune — 411033",
+      "email": "dmmatepatil@gmail.com",
+      "phone": "+91 98234 48609",
+      "objective": "I want to be a part of a learning organisation which values professionalism and commitment to perform, offering responsibilities and opportunities for growth where I can make the most of my skills and knowledge — with sincerity, credibility, and a drive to be part of the solution.",
+      "keyStrengths": [
+        "Published Patent",
+        "Total 20+ Years of Experience",
+        "Published Four Books",
+        "Papers Published with Citation H & I Index",
+        "Proven ability to work well in Team Environment",
+        "Editorial Board and Reviewer Member on peer-reviewed journals",
+        "Honored as Reviewer — Fifth International Conference on Mechanical, Electric and Industrial Engineering, Sanya, China, May 2022"
+      ],
+      "stats": [
+        {
+          "number": "20+",
+          "label": "Years of Experience"
+        },
+        {
+          "number": "40+",
+          "label": "Research Publications*"
+        },
+        {
+          "number": "4",
+          "label": "Books Published"
+        },
+        {
+          "number": "2",
+          "label": "Patent / IP Entries"
+        },
+        {
+          "number": "27",
+          "label": "UG Batches Guided"
+        },
+        {
+          "number": "23",
+          "label": "PG Projects Guided"
+        }
+      ],
+      "statsNote": "* Publication totals vary between sections of the CV (39 or 47 depending on the counting method). '40+' reflects a conservative combined count.",
+      "researchThemes": [
+        "Manufacturing & Machining",
+        "Surface Engineering",
+        "Material Science",
+        "Heat Transfer",
+        "CFD & Simulation",
+        "Mechanical Design",
+        "Renewable Energy",
+        "Thermal Engineering"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "phd",
+      "degree": "Doctor of Philosophy (Ph.D.)",
+      "field": "Mechanical Engineering",
+      "institution": "Priyadarshini College of Engineering, Nagpur",
+      "university": "Rashtrasant Tukdoji Maharaj Nagpur University (R.T.M.N.U.), Nagpur",
+      "year": "March 2015",
+      "thesis": "Experimental Investigation of Parametric Effects on the Surface Roughness of an Aluminum Alloy Produced by Burnished Spherical Surface Tool",
+      "advisor": "Dr. G. K. Awari, Head Govt. Poly. Nagpur, Ex-Principal TGPCOE, Nagpur",
+      "notificationNo": "RTMNU/Ph.D.(Cell)/2/220  Dated 7/4/2015",
+      "highlight": true
+    },
+    {
+      "id": "mba",
+      "degree": "Master of Business Administration (MBA)",
+      "field": "Human Resource",
+      "institution": "Dharmpeth College, Nagpur",
+      "university": "Y.C.M.O. Nashik (M.S.)",
+      "year": "Summer 2010",
+      "percentage": "59.68",
+      "division": "Second Class",
+      "advisor": "Dr. Nitin Vighne Lakshya, Ex. Prof. YCCE Nagpur"
+    },
+    {
+      "id": "me",
+      "degree": "Master of Engineering (M.E.)",
+      "field": "Mechanical Engineering",
+      "institution": "Samrat Ashok Technological Institute, Vidisha (M.P.)",
+      "university": "Rajiv Gandhi Technological University, Bhopal (M.P.)",
+      "year": "Summer 2001",
+      "percentage": "72.50",
+      "division": "First Class",
+      "thesis": "Analysis and Applications of Material Requirement Planning in Small and Large Scale Industries in Industrial area of Bhopal",
+      "advisor": "Dr. K. C. Jain, Rtd. Head & Prof., Samrat Ashok Technological Institute, Vidisha"
+    },
+    {
+      "id": "be",
+      "degree": "Bachelor in Production Engineering (B.E.)",
+      "field": "Production Engineering",
+      "institution": "College of Engineering & Technology, Akola (M.S.)",
+      "university": "Amravati University (S.G.B.), Amravati",
+      "year": "Summer 1997",
+      "percentage": "66.65",
+      "division": "First Class"
+    },
+    {
+      "id": "hssc",
+      "degree": "H.S.S.C.",
+      "field": "General Science",
+      "institution": "RLT Science College, Akola (M.S.)",
+      "university": "Maharashtra State Board, Amravati",
+      "year": "March 1993",
+      "percentage": "56.76",
+      "division": "Second Class"
+    },
+    {
+      "id": "ssc",
+      "degree": "S.S.C.",
+      "field": "Science & Maths, Marathi, Sanskrit, Social Science",
+      "institution": "Swawalambi Vidyalaya, Akola (M.S.)",
+      "university": "Maharashtra State Board, Nagpur",
+      "year": "March 1991",
+      "percentage": "71.14",
+      "division": "First Class"
+    }
+  ],
+  "experience": [
+    {
+      "id": "rsce",
+      "designation": "Associate Professor",
+      "organization": "JSPM's Rajarshi Shahu College of Engineering, Pune",
+      "from": "03 Oct 2017",
+      "to": "Present",
+      "duration": "Till Date — Current",
+      "current": true
+    },
+    {
+      "id": "nmiet",
+      "designation": "Associate Professor",
+      "organization": "Nutan Maharashtra Institute of Engineering & Technology, Pune",
+      "from": "09 Feb 2017",
+      "to": "02 Oct 2017",
+      "duration": "8 Months"
+    },
+    {
+      "id": "dyp",
+      "designation": "Associate Professor",
+      "organization": "D.Y. Patil Institute of Engineering & Technology, Ambi, Pune",
+      "from": "21 Nov 2014",
+      "to": "08 Feb 2017",
+      "duration": "2.2 Years"
+    },
+    {
+      "id": "pce",
+      "designation": "Assistant Professor",
+      "organization": "Priyadarshini College of Engineering, Nagpur",
+      "from": "01 Aug 2005",
+      "to": "21 Nov 2014",
+      "duration": "8.5 Years"
+    },
+    {
+      "id": "ghrce",
+      "designation": "Lecturer",
+      "organization": "G. H. Raisoni College of Engineering, Nagpur",
+      "from": "24 Jun 2002",
+      "to": "01 Jul 2005",
+      "duration": "3.1 Years"
+    },
+    {
+      "id": "lamit",
+      "designation": "Lecturer",
+      "organization": "L.A.M.I.T. Polytechnic, Dhamangaon, Amravati",
+      "from": "07 Jul 2000",
+      "to": "25 May 2001",
+      "duration": "1 Year"
+    }
+  ],
+  "adminExperience": [
+    {
+      "id": "nba",
+      "role": "NBA, NAAC & Autonomy Coordinator",
+      "description": "Working as coordinator in Mechanical Department",
+      "institution": "JSPM's RSCE",
+      "period": "Current"
+    },
+    {
+      "id": "hod",
+      "role": "Head of Department & Dean Academics",
+      "description": "Worked as HoD & Dean Academics",
+      "institution": "Nutan Maharashtra Institute of Engineering & Technology, Pune",
+      "period": "2017"
+    },
+    {
+      "id": "dean",
+      "role": "Dean Academics",
+      "description": "Worked as Dean Academics",
+      "institution": "D.Y. Patil Institute of Engineering & Technology, Ambi, Pune",
+      "period": "2014–2017"
+    },
+    {
+      "id": "exam",
+      "role": "College Examination Officer",
+      "description": "College CEO (College code-40914) for SPPU Examination; Co-in-charge Winter Exam 2009, R.T.M. Nagpur University",
+      "institution": "Various",
+      "period": "Multiple"
+    },
+    {
+      "id": "gate",
+      "role": "GATE Presiding Officer",
+      "description": "Presiding Officer for GATE examinations for four years",
+      "institution": "",
+      "period": "2010–2013"
+    }
+  ],
+  "academicContributions": [
+    {
+      "id": "sttp",
+      "title": "Research Methodology STTP",
+      "description": "Member of STTP organized on Research Methodology, 26th December 2013"
+    },
+    {
+      "id": "mesa",
+      "title": "Student Forum MESA",
+      "description": "Faculty In-charge for Student Forum MESA, 2007–2014"
+    },
+    {
+      "id": "horizon",
+      "title": "Horizon 2010",
+      "description": "Joint Organizing Secretary for Horizon 2010, National Student Convention at PCE"
+    },
+    {
+      "id": "pegasus",
+      "title": "Pegasus — 2006",
+      "description": "Member of Pegasus Student Paper Presentation Competition"
+    },
+    {
+      "id": "pica",
+      "title": "PICA — 2006",
+      "description": "Committee member PICA-2006"
+    },
+    {
+      "id": "preconf",
+      "title": "Pre-Conference School",
+      "description": "Committee member of Pre-Conference School, IFToMM International Conference 2006"
+    },
+    {
+      "id": "expert",
+      "title": "Expert Lectures — Research Methodology",
+      "description": "Delivered Expert Lectures on Research Methodology at various colleges"
+    },
+    {
+      "id": "workshops",
+      "title": "Student Workshops & Programs",
+      "description": "Organized various workshops and programs for students under department forum"
+    }
+  ],
+  "patents": [
+    {
+      "id": "p1",
+      "title": "Safety Warning System for Two Wheelers",
+      "referenceNumber": "202021005642",
+      "applicationType": "Ordinary Application",
+      "status": "Published",
+      "approved": false,
+      "description": "A safety warning system designed specifically for two-wheeler vehicles to enhance road safety and rider awareness."
+    },
+    {
+      "id": "p2",
+      "title": "Battery Operated Harvesting Machine for Rice Crop",
+      "referenceNumber": "2104/2022-CO/A",
+      "applicationType": "Copyright / Intellectual Property",
+      "diaryNumber": "2104/2022-CO/A",
+      "status": "Approved",
+      "approved": true,
+      "description": "An innovative battery-operated agricultural machine designed for efficient harvesting of rice crops, reducing manual labour."
+    }
+  ],
+  "researchGrant": [
+    {
+      "id": "grant-aicte",
+      "title": "AICTE Sponsored STTP",
+      "amount": "₹5,00,000",
+      "amountFormatted": "₹5 Lakhs",
+      "sponsor": "All India Council for Technical Education (AICTE)",
+      "fileNo": "34-56/146/RIFD/STTP/Policy-1/2017-18",
+      "date": "25 February 2019",
+      "description": "Research grant received for conducting a Short Term Training Programme (STTP), sponsored by AICTE under the policy for technical education development."
+    }
+  ],
+  "consultancy": [
+    {
+      "id": "con1",
+      "title": "Performance Evaluation of Boiler",
+      "subtitle": "Bagasse Based Cogeneration Power Plant in Sugar Factory",
+      "client": "Bhairavnath Sugar Works",
+      "clientLocation": "A/p. Sonari, Tal. Paranda, Maharashtra",
+      "amount": "₹4,50,000",
+      "year": "2020–21",
+      "description": "Performance evaluation of boiler by bagasse based cogeneration power plant in sugar factory — comprehensive assessment of thermal efficiency and operational parameters."
+    },
+    {
+      "id": "con2",
+      "title": "Optimized Layout for Sugar Industry",
+      "subtitle": "Development of optimized factory layout",
+      "client": "Bhairavnath Sugar Works",
+      "clientLocation": "A/p. Sonari, Tal. Paranda, Maharashtra",
+      "amount": "₹4,50,000",
+      "year": "2019–20",
+      "description": "Development of an optimized plant layout for sugar industry operations to improve production flow, reduce material handling, and maximize efficiency."
+    },
+    {
+      "id": "con3",
+      "title": "Planetary Gear Box & Rope Coupling Improvements",
+      "subtitle": "Improvements & value addition in mill drive operations",
+      "client": "Bhairavnath Sugar Works",
+      "clientLocation": "A/p. Sonari, Tal. Paranda, Maharashtra",
+      "amount": "₹4,50,000",
+      "year": "2018–19",
+      "description": "Improvements and value addition in operations of planetary gear boxes and rope couplings for mill drive (low RPM, high torque) in sugar factory."
+    }
+  ],
+  "books": [
+    {
+      "id": "b1",
+      "title": "Formulation of Database Model on Parametric Effects on Aluminum Alloy",
+      "isbn": "978-3-659-74933-9",
+      "color": "#607984",
+      "colorLight": "#DCEBF0",
+      "description": "Research monograph on formulation of experimental database models for parametric effects on aluminum alloy using burnishing processes."
+    },
+    {
+      "id": "b2",
+      "title": "Robotics",
+      "isbn": "978-93-5158-536-7",
+      "color": "#C96A45",
+      "colorLight": "#FBE9E2",
+      "description": "Comprehensive textbook on robotics for engineering students, covering fundamentals, kinematics, and industrial applications."
+    },
+    {
+      "id": "b3",
+      "title": "Mechatronics",
+      "isbn": "978-93-5158-567-1",
+      "color": "#263238",
+      "colorLight": "#ECEFF1",
+      "description": "Textbook on mechatronics systems integrating mechanical, electrical, and computing disciplines for modern engineering education."
+    },
+    {
+      "id": "b4",
+      "title": "Material Science",
+      "isbn": "978-93-5158-223-6",
+      "color": "#B49A67",
+      "colorLight": "#F8F3E8",
+      "description": "Engineering textbook on material science, covering properties, processing, and applications of engineering materials."
+    }
+  ],
+  "publications": [
+    {
+      "id": "s1",
+      "title": "Design, Analysis & Result of Tool Holder Considering the Plain Drilling & Boring Operation under Maximum Torque Conditions",
+      "authors": "Mr. Manu Panickar, Prof. D. M. Mate",
+      "journal": "Materials Today: Proceedings",
+      "year": 2021,
+      "volume": "43",
+      "issue": "Part 2",
+      "pages": "2397–2403",
+      "type": "scopus",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "s2",
+      "title": "Effects of Pin Fin Arrangement on Heat Transfer Characteristics on Performance of Heat Sink",
+      "authors": "Dr. D. M. Mate, Dr. V. T. Tale",
+      "journal": "Materials Today: Proceedings",
+      "year": 2021,
+      "volume": "43",
+      "issue": "Part 2",
+      "pages": "2377–2382",
+      "type": "scopus",
+      "area": "Heat Transfer"
+    },
+    {
+      "id": "s3",
+      "title": "An Experimental Investigation of Wear Particles Emission and Noise Level from Smart Braking System",
+      "authors": "Lalit N. Patil, Hrishikesh P. Khairnar, J. A. Hole, Dr. D. M. Mate, A.V. Dube, R. N. Panchal, V. B. Hiwase",
+      "journal": "EVERGREEN Joint Journal of Novel Carbon Resource Sciences & Green Asia Strategy",
+      "year": 2022,
+      "volume": "09",
+      "issue": "03",
+      "pages": "711–720",
+      "issn": "2189-0420",
+      "doi": "10.5109/4843103",
+      "type": "scopus",
+      "area": "Manufacturing & Machining"
+    },
+    {
+      "id": "s4",
+      "title": "Computational and Experimental Analysis of Effect of Dimpled on Aerodynamic Performance of Savonius Vertical Axis Wind Turbine",
+      "authors": "Rajesh Narayan Jarudkar, Dr. Pranav Charkha, Dr. Yogesh P. Deshmukh, Dr. D. M. Mate",
+      "journal": "European Chemical Bulletin",
+      "year": 2023,
+      "volume": "12",
+      "issue": "Special Issue 5",
+      "pages": "84–92",
+      "issn": "2063-5346",
+      "doi": "10.31838/ecb/2023.12.si5.007",
+      "type": "scopus",
+      "area": "Renewable Energy"
+    },
+    {
+      "id": "s5",
+      "title": "Savonius Vertical Axis Wind Turbine Design and Analysis with Dimples and Fins",
+      "authors": "Rajesh Narayan Jarudkar, Dr. Pranav Charkha, Dr. Yogesh P. Deshmukh, Dr. Sham H. Mankar, Dr. D. M. Mate, Dr. V. T. Tale",
+      "journal": "International Journal of Intelligent Systems and Applications in Engineering (IJISAE)",
+      "year": 2023,
+      "volume": "11",
+      "issue": "7s",
+      "pages": "132–137",
+      "issn": "2147-6799",
+      "type": "scopus",
+      "area": "Renewable Energy"
+    },
+    {
+      "id": "s6",
+      "title": "Comparative Evaluation of Different Parameters on Aerodynamic Performance of the Savonius Vertical Axis Wind Turbine",
+      "authors": "Rajesh N. Jarudkar, Dr. Sachin R. Karale, Dr. Yogesh P. Deshmukh, Umakant G. Khillare, Dr. D. M. Mate",
+      "journal": "China Petroleum Processing and Petrochemical Technology, Catalyst Research",
+      "year": 2023,
+      "volume": "23",
+      "issue": "2",
+      "pages": "312–323",
+      "type": "scopus",
+      "area": "Renewable Energy"
+    },
+    {
+      "id": "s7",
+      "title": "Determination of Deflection Function in A Rectangular Body",
+      "authors": "N. P. Mungle, P. Singh, S. V. Prayagi, D. M. Mate",
+      "journal": "Journal of Advanced Zoology",
+      "year": 2023,
+      "volume": "44",
+      "issue": "S-5",
+      "pages": "1726–1730",
+      "issn": "0253-7214",
+      "type": "scopus",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "s8",
+      "title": "Formulation and Comparison of Experimental Based Mathematical Model with Artificial Neural Network Simulation on Surface Roughness with Burnished Spherical Surface Tool on Aluminum Alloy 6351",
+      "authors": "Dnyaneshwar M. Mate, Raju N. Panchal, Sham H. Mankar, Ramesh K. Rathod, Vithoba T. Tale",
+      "journal": "International Journal on Recent and Innovation Trends in Computing and Communication",
+      "year": 2023,
+      "volume": "11",
+      "issue": "10",
+      "pages": "300–306",
+      "issn": "2321-8169",
+      "doi": "10.17762/ijritcc.v11i10.8493",
+      "type": "scopus",
+      "area": "Surface Engineering"
+    },
+    {
+      "id": "j1",
+      "title": "An Analysis of Response of An Epicyclic Gear Train Solution with Tandem Bicycling",
+      "authors": "D. N. Nandgaye, D. M. Mate",
+      "journal": "International Journal of Multidisciplinary Research & Advances in Engineering (IJMRA)",
+      "year": 2011,
+      "volume": "3",
+      "issue": "II",
+      "pages": "1–13",
+      "issn": "0975-7074",
+      "type": "journal-international",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "j2",
+      "title": "An experimental investigation of parameters influencing Burnishing process on aluminum alloy",
+      "authors": "D. M. Mate, Dr. G. K. Awari, Dr. J. P. Modak",
+      "journal": "International Journal of Materials Engineering and Technology",
+      "year": 2011,
+      "volume": "6",
+      "issue": "1",
+      "pages": "75–82",
+      "type": "journal-international",
+      "area": "Manufacturing & Machining"
+    },
+    {
+      "id": "j3",
+      "title": "Experimental investigation of parameters by burnishing process on HE20 aluminum alloy",
+      "authors": "D. M. Mate, Dr. G. K. Awari, Dr. J. P. Modak",
+      "journal": "International Journal of Applied Engineering",
+      "year": 2011,
+      "volume": "I",
+      "pages": "55–58",
+      "type": "journal-international",
+      "area": "Manufacturing & Machining"
+    },
+    {
+      "id": "j4",
+      "title": "Modification of surface integrity by burnished spherical surface tool on cylindrical workpiece",
+      "authors": "D. M. Mate, Dr. G. K. Awari, J. P. Modak",
+      "journal": "International Journal of Advances in Machining and Forming Operations",
+      "year": 2012,
+      "volume": "4",
+      "issue": "1",
+      "pages": "55–62",
+      "type": "journal-international",
+      "area": "Surface Engineering"
+    },
+    {
+      "id": "j5",
+      "title": "An Approach to Design of Child Saver Machine for Child Trapped in Borehole",
+      "authors": "D. M. Mate",
+      "journal": "International Journal of Research in Mechanical Engineering",
+      "year": 2013,
+      "volume": "1",
+      "issue": "2",
+      "pages": "26–38",
+      "type": "journal-international",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "j6",
+      "title": "Formulation of Experimental Data Based Model for Aluminum Alloy HE15 Operation with Burnishing Tool on Lathe Machine Using Dimensional Analysis",
+      "authors": "D. M. Mate, Dr. G. K. Awari",
+      "journal": "International Journal of Research in Mechanical Engineering",
+      "year": 2013,
+      "volume": "1",
+      "issue": "2",
+      "pages": "80–90",
+      "type": "journal-international",
+      "area": "Manufacturing & Machining"
+    },
+    {
+      "id": "j7",
+      "title": "Formulation of Experimental Data Based Mathematical Model for Al2014 with Spherical Surface Burnishing Tool",
+      "authors": "D. M. Mate, Prof. P. S. Choudhari",
+      "journal": "International Journal of Research in Mechanical Engineering",
+      "year": 2014,
+      "volume": "2",
+      "issue": "3",
+      "pages": "1–6",
+      "type": "journal-international",
+      "area": "Surface Engineering"
+    },
+    {
+      "id": "j8",
+      "title": "Study And Analysis Of Pin Of Knuckle Joint In Train",
+      "authors": "R. S. Dharpure, Dr. D. M. Mate",
+      "journal": "Journal of Emerging Technologies and Innovative Research",
+      "year": 2014,
+      "volume": "4",
+      "issue": "1",
+      "pages": "167–173",
+      "type": "journal-international",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "j9",
+      "title": "An approach to design of child saver machine for child trapped in borehole",
+      "authors": "CN Sakhale, D. M. Mate, Subhasis Saha, Tomar Dharmpal",
+      "journal": "International Journal of Research in Mechanical Engineering",
+      "year": 2013,
+      "volume": "1",
+      "issue": "1",
+      "pages": "26–38",
+      "type": "journal-international",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "j10",
+      "title": "Design and Synthesis of Crop Cutting Machine",
+      "authors": "Rahul Verghane, D. M. Mate",
+      "journal": "International Journal of Advanced and Innovative Research",
+      "year": 2014,
+      "volume": "3",
+      "issue": "6",
+      "pages": "26–33",
+      "type": "journal-international",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "j11",
+      "title": "Design of Drilling Cum Riveting Machine",
+      "authors": "Kaustubh G. Sontakke, D. M. Mate",
+      "journal": "International Journal Mechanical Research and Engineering and Technology",
+      "year": 2014,
+      "volume": "3",
+      "issue": "1",
+      "pages": "1–7",
+      "type": "journal-international",
+      "area": "Manufacturing & Machining"
+    },
+    {
+      "id": "j12",
+      "title": "Design and Analysis of Bent Pin Mechanism",
+      "authors": "Sachin R. Jayswal, D. M. Mate, C. N. Sakhale",
+      "journal": "Journal of Emerging Technologies and Innovative Research",
+      "year": 2014,
+      "volume": "1",
+      "issue": "5",
+      "pages": "256–260",
+      "issn": "2349-5162",
+      "type": "journal-international",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "j13",
+      "title": "Design And Analysis Of Drilling Cum Riveting Machine",
+      "authors": "Kaustubh G. Sontakke, D. M. Mate",
+      "journal": "Journal of Emerging Technologies and Innovative Research",
+      "year": 2014,
+      "volume": "1",
+      "issue": "6",
+      "pages": "419–426",
+      "issn": "2349-5162",
+      "type": "journal-international",
+      "area": "Manufacturing & Machining"
+    },
+    {
+      "id": "j14",
+      "title": "Heat Transfer Enhancement of Flow through Divergent Channel in Force Convection — A Review",
+      "authors": "A. S. Patil, D. M. Mate, Atul V. Kulkarni",
+      "journal": "IASTER's International Journal of Research in Mechanical Engineering",
+      "year": 2015,
+      "volume": "3",
+      "issue": "2",
+      "pages": "7–12",
+      "issn": "2347-8772",
+      "type": "journal-international",
+      "area": "Heat Transfer"
+    },
+    {
+      "id": "j15",
+      "title": "Comparative Analysis Of PTFE Composite With Different Filler Material Using Taguchi Approach Method",
+      "authors": "Shubhangi G. Varpe, D. M. Mate",
+      "journal": "International Journal For Science And Advance Research In Technology",
+      "year": 2015,
+      "volume": "1",
+      "issue": "8",
+      "type": "journal-international",
+      "area": "Material Science"
+    },
+    {
+      "id": "j16",
+      "title": "Comparative analysis for tribological behaviour of PTFE composite with different filler material",
+      "authors": "Shubhangi G. Varpe, Dr. D. M. Mate",
+      "journal": "International Engineering Research Journal (IERJ)",
+      "year": 2015,
+      "issue": "Special Issue 2",
+      "pages": "2556–2559",
+      "issn": "2395-1621",
+      "type": "journal-international",
+      "area": "Material Science"
+    },
+    {
+      "id": "j17",
+      "title": "A Study of Human ACL for Change of Volume with the Help of Three Dimensional Finite Element Modeling",
+      "authors": "V. R. Raut, Dr. D. M. Mate",
+      "journal": "International Journal of Engineering Development and Research (IJEDR)",
+      "year": 2016,
+      "volume": "4",
+      "issue": "2",
+      "pages": "347–357",
+      "issn": "2321-9939",
+      "type": "journal-international",
+      "area": "CFD & Simulation"
+    },
+    {
+      "id": "j18",
+      "title": "A Study of Artificial Fiber Tissue using Finite Element Analysis for Optimizing Volumetric Dimensions",
+      "authors": "V. R. Raut, Dr. D. M. Mate",
+      "journal": "International Journal of Research in Mechanical Engineering",
+      "year": 2016,
+      "volume": "4",
+      "issue": "3",
+      "pages": "15–27",
+      "type": "journal-international",
+      "area": "CFD & Simulation"
+    },
+    {
+      "id": "j19",
+      "title": "An Investigative Study of Spur Gear Failure by FEA and Photoelastic Method",
+      "authors": "Vrushali Wable, Dr. D. M. Mate",
+      "journal": "International Journal of Science and Research (IJSR)",
+      "year": 2016,
+      "volume": "5",
+      "issue": "7",
+      "pages": "544–549",
+      "type": "journal-international",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "j20",
+      "title": "Modal Analysis of Aluminium & Natural Rubber Sandwiched Beam",
+      "authors": "Prashant R. Mahale, Dr. D. M. Mate",
+      "journal": "International Journal of Science & Technology (IJST)",
+      "year": 2016,
+      "volume": "6",
+      "issue": "4",
+      "pages": "12–19",
+      "type": "journal-international",
+      "area": "Material Science"
+    },
+    {
+      "id": "j21",
+      "title": "Design & Analysis of Fluoropolymer Helical Coil Tube in Tube Heat Exchanger",
+      "authors": "Yogesh Gagada, Dr. D. M. Mate, Prof. Shrikant Kathwate",
+      "journal": "International Engineering Research Journal — Special Edition PGCON-MECH-2017",
+      "year": 2017,
+      "pages": "1–5",
+      "type": "journal-international",
+      "area": "Heat Transfer"
+    },
+    {
+      "id": "j22",
+      "title": "Experimental investigation of Forced convective heat transfer coefficient from W shaped ribbed surface",
+      "authors": "Dr. D. M. Mate, R. K. Jadhav",
+      "journal": "Journal of Thermal Science and Engineering Applications, ASME",
+      "year": 2017,
+      "type": "journal-international",
+      "area": "Heat Transfer"
+    },
+    {
+      "id": "j23",
+      "title": "Exhaust Gas Heat Utilization To Keep Food Delivery Item Warm",
+      "authors": "Nilesh B. Sanap, Dr. D. M. Mate, Prof. S. D. Kathwate",
+      "journal": "International Engineering Research Journal — Special Edition PGCON-MECH-2017",
+      "year": 2017,
+      "pages": "6–11",
+      "type": "journal-international",
+      "area": "Thermal Engineering"
+    },
+    {
+      "id": "j24",
+      "title": "Review paper on experimental analysis of aluminium rod of heat transfer rate with changing tapered angles and changing cross section area",
+      "authors": "Saurabh R. Avhad, Dr. D. M. Mate et al.",
+      "journal": "International Journal of Academic Research and Development",
+      "year": 2018,
+      "volume": "3",
+      "issue": "Special Issue 2",
+      "pages": "83–88",
+      "issn": "2455-4197",
+      "type": "journal-international",
+      "area": "Heat Transfer"
+    },
+    {
+      "id": "j25",
+      "title": "Experimental Data Based Model for Aluminum alloy (6351) Operation with Spherical Surface Burnishing Tool using Dimensional Analysis",
+      "authors": "Dr. D. M. Mate, N. S. Dixit, P. L. Firake",
+      "journal": "International Journal of Advance Research in Science and Engineering (IJARSE)",
+      "year": 2018,
+      "volume": "7",
+      "issue": "Special Issue 3",
+      "pages": "132–137",
+      "type": "journal-international",
+      "area": "Surface Engineering"
+    },
+    {
+      "id": "j26",
+      "title": "Design, analysis and performance evaluation of hybrid exhaust gas heat recovery device to keep food delivery items warm",
+      "authors": "Nilesh B. Sanap, Dr. D. M. Mate, S. D. Kathwate",
+      "journal": "International Journal of Advance Research and Development (IJARnD)",
+      "year": 2018,
+      "volume": "3",
+      "issue": "5",
+      "pages": "44–56",
+      "type": "journal-international",
+      "area": "Thermal Engineering"
+    },
+    {
+      "id": "j27",
+      "title": "Experimental Analysis of Aluminum Rod of Heat Transfer Rate with Changing Dimension Size and Shape",
+      "authors": "Mr. Saurabh Avhad, Dr. D. M. Mate, Prof. Mandhare M. D., Prof. Kathwate S. D.",
+      "journal": "International Journal for Scientific Research & Development (IJSRD)",
+      "year": 2018,
+      "volume": "5",
+      "issue": "11",
+      "pages": "6–7",
+      "type": "journal-international",
+      "area": "Heat Transfer"
+    },
+    {
+      "id": "j28",
+      "title": "Experimental study of alternative refrigerants to replace R134a in a domestic refrigerator",
+      "authors": "A. E. Kharat, Dr. D. M. Mate, S. D. Kathwate",
+      "journal": "International Journal of Academic Research and Development",
+      "year": 2018,
+      "volume": "3",
+      "issue": "Special Issue 2",
+      "pages": "111–120",
+      "type": "journal-international",
+      "area": "Thermal Engineering"
+    },
+    {
+      "id": "j29",
+      "title": "Effect of Pin Fin Geometry on Performance of Heat Sink",
+      "authors": "Arati Jadhav, Dr. D. M. Mate",
+      "journal": "International Research Journal of Engineering and Technology",
+      "year": 2019,
+      "volume": "6",
+      "issue": "3",
+      "type": "journal-international",
+      "area": "Heat Transfer"
+    },
+    {
+      "id": "j30",
+      "title": "Review & Design Analysis of Combination Tool Head for Truncated Pivot Thrust Bearing Holder",
+      "authors": "Mr. Manu Panickar, Prof. Dr. D. M. Mate",
+      "journal": "IJSRD — International Journal for Scientific Research & Development",
+      "year": 2020,
+      "volume": "8",
+      "issue": "2",
+      "issn": "2321-0613",
+      "type": "journal-international",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "j31",
+      "title": "Buckling analysis of rectangular plate using FEA software",
+      "authors": "Mayuresh Mrityunjay More, Prof. Dr. D. M. Mate, Dr. S. N. Khan",
+      "journal": "Journal of Emerging Technologies and Innovative Research (JETIR)",
+      "year": 2021,
+      "volume": "8",
+      "issue": "8",
+      "pages": "158–162",
+      "type": "journal-international",
+      "area": "CFD & Simulation"
+    },
+    {
+      "id": "j32",
+      "title": "Buckling failure analysis in rectangular plates using FEA software when both edges of plate are fixed",
+      "authors": "Mayuresh M. More, Prof. Dr. D. M. Mate, Prof. Dr. S. N. Khan, Prof. Dr. A. M. Badhade",
+      "journal": "International Engineering Research Journal (IERJ)",
+      "year": 2021,
+      "volume": "3",
+      "issue": "4",
+      "pages": "6670–6674",
+      "issn": "2395-1621",
+      "type": "journal-international",
+      "area": "CFD & Simulation"
+    },
+    {
+      "id": "j33",
+      "title": "Experimental and CFD Simulation for Improvement in Inlet Duct Design for Existing Compressor",
+      "authors": "Miss. Sonia Bhagat S. V., Dr. D. M. Mate, Prof. S. D. Kathwate",
+      "journal": "International Journal of Engineering Research & Technology (IJERT)",
+      "year": 2020,
+      "volume": "9",
+      "issue": "4",
+      "pages": "110–116",
+      "type": "journal-international",
+      "area": "CFD & Simulation"
+    },
+    {
+      "id": "j34",
+      "title": "Experimental Investigation on Cyclone Separator Performance using CFD Simulation",
+      "authors": "Mr. Ganesh B. Rathod, Dr. D. M. Mate, Prof. S. D. Kathwate",
+      "journal": "International Journal of Engineering Research & Technology (IJERT)",
+      "year": 2020,
+      "volume": "9",
+      "issue": "4",
+      "pages": "122–127",
+      "type": "journal-international",
+      "area": "CFD & Simulation"
+    },
+    {
+      "id": "j35",
+      "title": "An Experimental Investigation of Wear Particles Emission and Noise Level from Smart Braking System",
+      "authors": "Lalit N. Patil, Dr. D. M. Mate, R. N. Panchal et al.",
+      "journal": "EVERGREEN Joint Journal of Novel Carbon Resource Sciences & Green Asia Strategy",
+      "year": 2022,
+      "volume": "09",
+      "issue": "03",
+      "pages": "711–723",
+      "type": "journal-international",
+      "area": "Manufacturing & Machining"
+    },
+    {
+      "id": "j36",
+      "title": "Weight Optimization of Lift Platform by Using Composite Shape Structures",
+      "authors": "Mrunalini Nandkishor Bhavsar, Dr. D. M. Mate",
+      "journal": "Research Journal",
+      "year": 2022,
+      "type": "journal-international",
+      "area": "Mechanical Design"
+    },
+    {
+      "id": "j37",
+      "title": "Solar Powered Scrap/Burr Collector",
+      "authors": "Dr. D. M. Mate, Harshal Wani, Om Adsure, Prajakat Patil, Aditya Lohar",
+      "journal": "International Journal of Advanced Research in Science, Communication and Technology (IJARSCT)",
+      "year": 2023,
+      "volume": "3",
+      "issue": "3",
+      "issn": "2581-9429",
+      "type": "journal-international",
+      "area": "Renewable Energy"
+    },
+    {
+      "id": "j38",
+      "title": "Design and Fabrication of Bamboo Slicer",
+      "authors": "Dr. D. M. Mate, Atharva Rajendra Kulkarni, Sachin Vijay, Suyash Govinda Pingale, Utkarsh Sharad Borase",
+      "journal": "International Journal of Advanced Research in Science, Communication and Technology (IJARSCT)",
+      "year": 2023,
+      "volume": "3",
+      "issue": "3",
+      "issn": "2581-9429",
+      "type": "journal-international",
+      "area": "Mechanical Design"
+    }
+  ],
+  "conferencePapers": [
+    {
+      "id": "c1",
+      "title": "Relationship between general environmental Management practices and performance of Green Supply Chain Management, an Experimental Study",
+      "authors": "D. M. Mate, Dr. K. C. Jain",
+      "conference": "International Conference on Emerging Research and Advances in Mechanical Engineering (ERA 2009)",
+      "location": "Velammal Engineering College, Chennai, Tamil Nadu, India",
+      "year": 2009,
+      "pages": "227–227",
+      "type": "international"
+    },
+    {
+      "id": "c2",
+      "title": "An Experimental Study for Selection of Optimal Parameters Influencing Super Finishing Process",
+      "authors": "D. M. Mate, Dr. G. K. Awari, S. S. Choudhari",
+      "conference": "International Conference on Advances in Mechanical Engineering (ICAME 2008)",
+      "location": "SVNIT, Surat, Gujarat, India",
+      "year": 2008,
+      "pages": "678–684",
+      "type": "international"
+    },
+    {
+      "id": "c3",
+      "title": "Parametric Study On Burnishing Process with Aluminium Alloy",
+      "authors": "D. M. Mate, Dr. G. K. Awari, Dr. J. P. Modak",
+      "conference": "International Conference on Sustainable Manufacturing: Issues, Trends and Practices (ICSM 2011)",
+      "location": "BITS Pilani, India",
+      "year": 2011,
+      "pages": "56–61",
+      "type": "international"
+    },
+    {
+      "id": "c4",
+      "title": "Experimental Approach to Burnishing Process on Cylindrical Workpiece",
+      "authors": "D. M. Mate, Dr. G. K. Awari",
+      "conference": "International Conference on Engineering Research and Application (ICERA 2012)",
+      "location": "Godavari College of Engineering, Jalgaon, Maharashtra, India",
+      "year": 2012,
+      "pages": "609–612",
+      "type": "international"
+    },
+    {
+      "id": "c5",
+      "title": "Validation of experimental model for surface roughness produced by burnishing on aluminum alloy",
+      "authors": "D. M. Mate, Dr. G. K. Awari",
+      "conference": "6th International Conference on Advanced Computing and Communication Technologies (ICACCT-2012), sponsored by IEEE Computer Society",
+      "location": "Asia Pacific Institute of Information Technology SD India, Panipat, Haryana, India",
+      "year": 2012,
+      "pages": "229–234",
+      "type": "international"
+    },
+    {
+      "id": "c6",
+      "title": "Experimental Data Based Model for Aluminum alloy (6351) Operation with Spherical Surface Burnishing Tool using Dimensional Analysis",
+      "authors": "Dr. D. M. Mate, N. S. Dixit, P. L. Firake",
+      "conference": "International Conference on Research in Science and Engineering (RISEM-18)",
+      "location": "G S Moze College of Engineering, Balewadi, Pune",
+      "year": 2018,
+      "pages": "132–137",
+      "type": "international"
+    },
+    {
+      "id": "c7",
+      "title": "Performance Evaluation of Surface Roughness with Abrasive Jet Machining on Alloy Steel",
+      "authors": "D. M. Mate, Kaushik Bezbrua",
+      "conference": "National Conference on Advances in Engineering, Technology and Applied Sciences (SPANDAN-13)",
+      "location": "Y. C. C. College of Engineering, Nagpur",
+      "year": 2013,
+      "type": "national"
+    },
+    {
+      "id": "c8",
+      "title": "Typical Challenges In Implementing Lean In A Job Shop: A Practical Approach",
+      "authors": "Kaushik Bezbrua, D. M. Mate",
+      "conference": "National Conference on Recent Trends & Challenges in Mechanical Engineering",
+      "location": "Kavikulguru Institute of Technology & Science, Ramtek, Maharashtra",
+      "year": 2013,
+      "type": "national"
+    },
+    {
+      "id": "c9",
+      "title": "The Gyro Machine Using Non Planar Mechanism Using Pro-E",
+      "authors": "D. M. Mate, Nilanjan Bhuniya",
+      "conference": "National Students Convention (Jigyasa-11)",
+      "location": "Priyadarshini College of Engineering, Nagpur",
+      "year": 2011,
+      "type": "national"
+    },
+    {
+      "id": "c10",
+      "title": "An Analysis Of Response of An Epicyclic Gear Train Solution with Tandem Bicycling",
+      "authors": "D. N. Nandgaye, D. M. Mate",
+      "conference": "Twenty Sixth National Conference of Mechanical Engineering and National Seminar on Recent Advance in CAD/CAM",
+      "location": "Sandip Institute of Technology & Research Centre, Nasik",
+      "year": 2010,
+      "pages": "47–53",
+      "type": "national"
+    },
+    {
+      "id": "c11",
+      "title": "Experimental Database Model Aluminum Alloy 6351 Operation with Burnishing Tool on Lathe Machine using Sensitivity Analysis",
+      "authors": "D. M. Mate",
+      "conference": "Recent Trends in Mechanical and Production Engineering (RTMPE 2013)",
+      "location": "Samrat Ashok Technological Institute, Vidisha, M.P.",
+      "year": 2013,
+      "pages": "29–37",
+      "type": "national"
+    }
+  ],
+  "courses": [
+    {
+      "id": "a1",
+      "title": "Sustainability Engineering",
+      "category": "ATAL FDP",
+      "institution": "GMR Institute of Technology",
+      "date": "9–13 Sep 2020",
+      "year": 2020
+    },
+    {
+      "id": "a2",
+      "title": "Cyber Security",
+      "category": "ATAL FDP",
+      "institution": "St. Joseph's College of Engineering",
+      "date": "24–28 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "a3",
+      "title": "Artificial Intelligence",
+      "category": "ATAL FDP",
+      "institution": "Jyothy Institute of Technology, Bengaluru",
+      "date": "21–25 Sep 2020",
+      "year": 2020
+    },
+    {
+      "id": "a4",
+      "title": "Internet of Things (IoT)",
+      "category": "ATAL FDP",
+      "institution": "College of Engineering, Kallooppara",
+      "date": "14–18 Sep 2020",
+      "year": 2020
+    },
+    {
+      "id": "c1",
+      "title": "Philosophy, Science and Religion: Science and Philosophy",
+      "category": "Coursera",
+      "institution": "University of Edinburgh",
+      "date": "08 Jan 2020",
+      "year": 2020
+    },
+    {
+      "id": "c2",
+      "title": "Learning How to Learn: Powerful Mental Tools",
+      "category": "Coursera",
+      "institution": "McMaster University & UC San Diego",
+      "date": "07 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "c3",
+      "title": "Write Professional Emails in English",
+      "category": "Coursera",
+      "institution": "Georgia Institute of Technology",
+      "date": "22 Jul 2020",
+      "year": 2020
+    },
+    {
+      "id": "c4",
+      "title": "Cyber Threats and Attack Vectors",
+      "category": "Coursera",
+      "institution": "University of Colorado System",
+      "date": "24 Jul 2020",
+      "year": 2020
+    },
+    {
+      "id": "c5",
+      "title": "Positive Psychology",
+      "category": "Coursera",
+      "institution": "University of North Carolina at Chapel Hill",
+      "date": "24 Jul 2020",
+      "year": 2020
+    },
+    {
+      "id": "c6",
+      "title": "COVID-19 Contact Tracing",
+      "category": "Coursera",
+      "institution": "Johns Hopkins University",
+      "date": "25 Jul 2020",
+      "year": 2020
+    },
+    {
+      "id": "c7",
+      "title": "COVID-19: What You Need to Know (CME Eligible)",
+      "category": "Coursera",
+      "institution": "Osmosis",
+      "date": "29 Jul 2020",
+      "year": 2020
+    },
+    {
+      "id": "c8",
+      "title": "Introduction to Cybersecurity Tools & Cyber Attacks",
+      "category": "Coursera",
+      "institution": "IBM",
+      "date": "30 Jul 2020",
+      "year": 2020
+    },
+    {
+      "id": "c9",
+      "title": "Positive Psychiatry and Mental Health",
+      "category": "Coursera",
+      "institution": "University of Sydney",
+      "date": "30 Jul 2020",
+      "year": 2020
+    },
+    {
+      "id": "c10",
+      "title": "Introduction to Philosophy",
+      "category": "Coursera",
+      "institution": "University of Edinburgh",
+      "date": "01 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "c11",
+      "title": "Philosophy, Science and Religion (Online)",
+      "category": "Coursera",
+      "institution": "University of Edinburgh",
+      "date": "01 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "c12",
+      "title": "Engineering Project Management: Initiating and Planning",
+      "category": "Coursera",
+      "institution": "Rice University",
+      "date": "05 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "c13",
+      "title": "A Life of Happiness and Fulfillment",
+      "category": "Coursera",
+      "institution": "Indian School of Business",
+      "date": "11 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "c14",
+      "title": "The Science of Well-Being",
+      "category": "Coursera",
+      "institution": "Yale University",
+      "date": "13 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "c15",
+      "title": "Project Management: The Basics for Success",
+      "category": "Coursera",
+      "institution": "UC Irvine",
+      "date": "15 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "s1",
+      "title": "Information Technology Orientation for Engineering Teachers",
+      "category": "STTP",
+      "institution": "D. J. Sanghvi College of Engineering, Mumbai",
+      "date": "2–13 Jun 2005",
+      "year": 2005
+    },
+    {
+      "id": "s2",
+      "title": "Industry Applications of CAD/CAM & Faculty Awareness Camp on Entrepreneurship",
+      "category": "STTP",
+      "institution": "Priyadarshini College of Engineering, Nagpur",
+      "date": "30 Jun – 8 Jul 2008",
+      "year": 2008
+    },
+    {
+      "id": "s3",
+      "title": "Manufacturing in 21st Century",
+      "category": "STTP",
+      "institution": "VNIT, Nagpur",
+      "date": "24–30 Aug",
+      "year": 2009
+    },
+    {
+      "id": "s4",
+      "title": "Learn to Design Your Own Solar Home System",
+      "category": "STTP",
+      "institution": "Energy Swaraj Foundation / NITTR Kolkata",
+      "date": "14 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "s5",
+      "title": "Role of Smart Technology in Maritime Industries",
+      "category": "STTP",
+      "institution": "AMET Deemed to be University",
+      "date": "14–19 Dec 2020",
+      "year": 2020
+    },
+    {
+      "id": "f1",
+      "title": "Use of ICT & Outcome Based Education",
+      "category": "FDP",
+      "institution": "JSPM's Rajarshi Shahu College of Engineering, Pune",
+      "date": "13–22 Nov 2017",
+      "year": 2017
+    },
+    {
+      "id": "f2",
+      "title": "International FDP — Scilab (Spoken Tutorial IITB)",
+      "category": "FDP",
+      "institution": "Sinhagad School of Engineering",
+      "date": "23–28 Apr 2020",
+      "year": 2020
+    },
+    {
+      "id": "f3",
+      "title": "Problem Based Learning",
+      "category": "FDP",
+      "institution": "JSPM's Rajarshi Shahu College of Engineering, Pune",
+      "date": "01–05 Jun 2020",
+      "year": 2020
+    },
+    {
+      "id": "f4",
+      "title": "Futuristic Technologies in Mechanical Industries",
+      "category": "FDP",
+      "institution": "DYPIEMR, Akurdi, Pune",
+      "date": "05–09 Jun 2020",
+      "year": 2020
+    },
+    {
+      "id": "f5",
+      "title": "Research Opportunities in Advanced Manufacturing Processes",
+      "category": "FDP",
+      "institution": "Bharati Vidyapeeth (Deemed), College of Engineering, Pune",
+      "date": "22–28 Jun 2020",
+      "year": 2020
+    },
+    {
+      "id": "f6",
+      "title": "Research Technique and Sustainable Development in Mechanical Engineering",
+      "category": "FDP",
+      "institution": "St. John College of Engineering and Management, Palghar",
+      "date": "12–17 Jul 2020",
+      "year": 2020
+    },
+    {
+      "id": "f7",
+      "title": "RUSA Organized FDP",
+      "category": "FDP",
+      "institution": "JSPM's RSCE, Pune",
+      "date": "27 Jul – 01 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "f8",
+      "title": "HVAC & R",
+      "category": "FDP",
+      "institution": "Vidhyavardhaka College of Engineering, Mysuru",
+      "date": "03–07 Aug 2020",
+      "year": 2020
+    },
+    {
+      "id": "f9",
+      "title": "Mechanical and Manufacturing Engineering",
+      "category": "ATAL FDP",
+      "institution": "Vishwakarma Institute of Information Technology, Pune",
+      "date": "21–25 Dec 2020",
+      "year": 2020
+    },
+    {
+      "id": "f10",
+      "title": "Secure and Intelligent IoT System Design",
+      "category": "ATAL FDP",
+      "institution": "College of Engineering, Kallooppara",
+      "date": "14–18 Sep 2020",
+      "year": 2020
+    },
+    {
+      "id": "w1",
+      "title": "Mission 10X: High Impact Teaching Skills",
+      "category": "Workshop",
+      "institution": "Wipro-India at YCCE, Nagpur",
+      "date": "15–19 Jun 2009",
+      "year": 2009
+    },
+    {
+      "id": "w2",
+      "title": "Improving Teaching Competencies",
+      "category": "Workshop",
+      "institution": "LTJSS, Priyadarshini College of Engineering, Nagpur",
+      "date": "4–12 Jun 2010",
+      "year": 2010
+    },
+    {
+      "id": "w3",
+      "title": "Quest 4 Best",
+      "category": "Workshop",
+      "institution": "Priyadarshini College of Engineering, Nagpur",
+      "date": "6–8 Sep 2012",
+      "year": 2012
+    },
+    {
+      "id": "w4",
+      "title": "LaTeX",
+      "category": "Workshop",
+      "institution": "TGPCE & T, Nagpur",
+      "date": "20 Oct 2012",
+      "year": 2012
+    },
+    {
+      "id": "w5",
+      "title": "ISTE Workshop on Aakash Tab for Education",
+      "category": "Workshop",
+      "institution": "IIT Bombay at PCE, Nagpur",
+      "date": "10–11 Nov 2012",
+      "year": 2012
+    },
+    {
+      "id": "w6",
+      "title": "Two Day Workshop on Advanced I.C. Engine",
+      "category": "Workshop",
+      "institution": "IIT Delhi at PCE, Nagpur",
+      "date": "6–7 Sep 2013",
+      "year": 2013
+    },
+    {
+      "id": "o1",
+      "title": "ICT Mode STTP — Measurement and Control of Industrial Automation",
+      "category": "Online",
+      "institution": "NITTR Kolkata",
+      "date": "27 Apr – 01 May 2020",
+      "year": 2020
+    },
+    {
+      "id": "o2",
+      "title": "MHRD's Innovation Cell — Innovation, Entrepreneurship, IPR and Startups",
+      "category": "Online",
+      "institution": "MHRD Innovation Cell",
+      "date": "04–22 May 2020",
+      "year": 2020
+    },
+    {
+      "id": "o3",
+      "title": "NAAC Awareness Programme for Faculty",
+      "category": "Online",
+      "institution": "Marathwada Mitra Mandal Institute of Technology (MMIT), Pune",
+      "date": "08–14 May 2020",
+      "year": 2020
+    },
+    {
+      "id": "o4",
+      "title": "Outcome Based Education: A Step Towards Excellence",
+      "category": "Online",
+      "institution": "Government College of Engineering, Karad (AICTE Margdarshan)",
+      "date": "11–15 May 2020",
+      "year": 2020
+    },
+    {
+      "id": "o5",
+      "title": "Emerging Trends in Industry 4.0 (International)",
+      "category": "Online",
+      "institution": "JSPM's RSCE, Pune (ACM Sponsored)",
+      "date": "18–29 May 2020",
+      "year": 2020
+    },
+    {
+      "id": "o6",
+      "title": "Advanced Trends in Engineering",
+      "category": "Online",
+      "institution": "Nagpur Institute of Technology & Institution of Engineers (India)",
+      "date": "19–23 May 2020",
+      "year": 2020
+    },
+    {
+      "id": "o7",
+      "title": "Intellectual Property Rights — Patent Application and Filings",
+      "category": "Online",
+      "institution": "Sinhgad Institute of Technology / MHRD IIC",
+      "date": "25–30 Jun 2020",
+      "year": 2020
+    }
+  ],
+  "awards": [
+    {
+      "id": "a1",
+      "title": "Best Researcher Award",
+      "organization": "VDGOOD International Scientist Conference for Awards 2021",
+      "location": "Chennai, India",
+      "year": "2021",
+      "description": "Recognised for outstanding contributions to research in mechanical engineering.",
+      "highlight": true
+    },
+    {
+      "id": "a2",
+      "title": "Best Paper Award",
+      "organization": "International Conference, Panipat",
+      "location": "Panipat, Haryana, India",
+      "year": "2012",
+      "description": "Best paper award at the 6th International Conference on Advanced Computing and Communication Technologies (ICACCT-2012).",
+      "highlight": true
+    },
+    {
+      "id": "a3",
+      "title": "International Conference Reviewer",
+      "organization": "Fifth International Conference on Mechanical, Electric and Industrial Engineering",
+      "location": "Sanya, China",
+      "year": "May 24–26, 2022",
+      "description": "Honored as reviewer for this prestigious international engineering conference."
+    },
+    {
+      "id": "a4",
+      "title": "Expert Member — SPPU CAS",
+      "organization": "Savitribai Phule Pune University (SPPU)",
+      "location": "Pune, India",
+      "year": "2019",
+      "description": "Member expert in Career Advancement Scheme (CAS) of SPPU vide letter no. सीसीओ/१०६५ dated 21/05/2019."
+    },
+    {
+      "id": "a5",
+      "title": "Ph.D. Thesis Reviewer",
+      "organization": "Various Universities in India",
+      "location": "Pan-India",
+      "year": "Ongoing",
+      "description": "Reviews numerous Ph.D. theses submitted to various universities across India."
+    },
+    {
+      "id": "a6",
+      "title": "Expert Member — International Conferences",
+      "organization": "Various Conferences, Maharashtra",
+      "location": "Maharashtra, India",
+      "year": "Ongoing",
+      "description": "Expert panel member for international conferences organized in Maharashtra."
+    },
+    {
+      "id": "a7",
+      "title": "Recognized Research Guide",
+      "organization": "R.T.M. Nagpur University",
+      "location": "Nagpur",
+      "year": "2010",
+      "description": "Recognized guide for M.Tech./M.E. by Research in the Faculty of Engineering & Technology (Letter No.: 2B/105, Dated: 1/12/2010)."
+    },
+    {
+      "id": "a8",
+      "title": "Expert Guest Lecturer",
+      "organization": "Universiti Malaysia Pahang (UMP) — Global Classroom Initiative 2020",
+      "location": "International (Online)",
+      "year": "2020",
+      "description": "Delivered expert lecture on Acceptance Sampling and Statistical Quality Control under the Global Classroom Initiative in collaboration with UMP, Malaysia."
+    },
+    {
+      "id": "a9",
+      "title": "Regional Research Symposium Participant",
+      "organization": "KLE TECH University with UNESCO & Alborg University, Denmark",
+      "location": "Hubballi, Karnataka",
+      "year": "Recent",
+      "description": "Attended Regional Research Symposium on Problem Based Learning."
+    }
+  ],
+  "memberships": [
+    {
+      "id": "m1",
+      "organization": "Indian Society for Technical Education",
+      "abbreviation": "ISTE",
+      "membershipType": "Life Member",
+      "membershipNo": "LM63136"
+    },
+    {
+      "id": "m2",
+      "organization": "International Association for Engineers",
+      "abbreviation": "IAENG",
+      "membershipType": "Member",
+      "membershipNo": "101348"
+    },
+    {
+      "id": "m3",
+      "organization": "Society for the Advancement of Material and Process Engineering",
+      "abbreviation": "SAMPE",
+      "membershipType": "North America Professional Member-at-Large",
+      "membershipNo": "56617908"
+    },
+    {
+      "id": "m4",
+      "organization": "Indian Society for Biomechanics",
+      "abbreviation": "ISB",
+      "membershipType": "Senior Life Member",
+      "membershipNo": "Sr. M 2457"
+    },
+    {
+      "id": "m5",
+      "organization": "HRD Forum — Vidharbha Industrial Association",
+      "abbreviation": "VIA",
+      "membershipType": "Member",
+      "membershipNo": "",
+      "location": "Nagpur"
+    },
+    {
+      "id": "m6",
+      "organization": "Universal Association of Mechanical and Aeronautical Engineers",
+      "abbreviation": "UAMAE",
+      "membershipType": "Senior Member",
+      "membershipNo": "SNM10100051149"
+    },
+    {
+      "id": "m7",
+      "organization": "D-Link Academy Community",
+      "abbreviation": "D-Link",
+      "membershipType": "Member",
+      "membershipNo": ""
+    }
+  ],
+  "editorialRoles": [
+    {
+      "id": "e1",
+      "journal": "International Journal of Innovative Research in Advanced Engineering",
+      "abbreviation": "IJIRAE",
+      "role": "Reviewers Board Member"
+    },
+    {
+      "id": "e2",
+      "journal": "International Journal of Research in Mechanical Engineering",
+      "abbreviation": "IASTER",
+      "role": "Editorial Board Member"
+    },
+    {
+      "id": "e3",
+      "journal": "Journal of Emerging Technologies and Innovative Research",
+      "abbreviation": "JETIR-RMS",
+      "role": "Member of the Editorial Board"
+    },
+    {
+      "id": "e4",
+      "journal": "International Journal of Emerging Technology & Advanced Engineering",
+      "abbreviation": "IJETAE",
+      "role": "Advisory / Editorial Board Member"
+    },
+    {
+      "id": "e5",
+      "journal": "International Journal of Engineering Development and Research",
+      "abbreviation": "IJEDR",
+      "role": "Review Member"
+    },
+    {
+      "id": "e6",
+      "journal": "International Journal of Exploring Emerging Trends in Engineering",
+      "abbreviation": "IJEET",
+      "role": "Reviewers Board Member"
+    },
+    {
+      "id": "e7",
+      "journal": "International Journal of Novel Research and Development",
+      "abbreviation": "IJNRD",
+      "role": "Member of the Editorial Board"
+    },
+    {
+      "id": "e8",
+      "journal": "International Journal of Innovative Research in Engineering & Multidisciplinary Present-day Sciences",
+      "abbreviation": "IJIREMPS",
+      "role": "Reviewers Board Member"
+    },
+    {
+      "id": "e9",
+      "journal": "International Journal of Latest Technology in Engineering, Management & Applied Science",
+      "abbreviation": "IJLTEMAS",
+      "role": "Editorial Board Member",
+      "issn": "2278-2540"
+    }
+  ],
+  "conferencesOrganized": [
+    {
+      "id": "co1",
+      "title": "PANSOPHY — National Level Conference on Advances in Mechanical Engineering",
+      "role": "Convener",
+      "date": "19–20 February 2016",
+      "association": "SPPU under QIP",
+      "location": "Nagpur"
+    },
+    {
+      "id": "co2",
+      "title": "Workshop on Research Methodology: A Step to Explore",
+      "role": "Coordinator",
+      "date": "15–16 January 2016",
+      "association": "SPPU under QIP"
+    },
+    {
+      "id": "co3",
+      "title": "Pegasus — Paper Presentation Competition",
+      "role": "Organizer",
+      "date": "2008–2011"
+    },
+    {
+      "id": "co4",
+      "title": "STTP on Industry Applications of CAD/CAM & Faculty Awareness Camp on Entrepreneurship",
+      "role": "Organizer",
+      "date": "30 June – 8 July 2008",
+      "location": "Priyadarshini College of Engineering, Nagpur"
+    },
+    {
+      "id": "co5",
+      "title": "Two Day Workshop on Advanced I.C. Engine",
+      "role": "Organizer",
+      "date": "6–7 September 2013",
+      "association": "IIT Delhi",
+      "location": "PCE, Nagpur"
+    }
+  ],
+  "extraCurricular": [
+    {
+      "id": "ec1",
+      "activity": "NSS Active Member",
+      "description": "Active member of National Service Scheme (NSS) for 3 years, participated in NSS camps"
+    },
+    {
+      "id": "ec2",
+      "activity": "Blood Donation Camps",
+      "description": "Organized Blood Donation Camps in college every year at PCE, Nagpur"
+    },
+    {
+      "id": "ec3",
+      "activity": "Career Development Seminar",
+      "description": "Delivered seminar on Career Development at Bhavan's College, Mumbai"
+    }
+  ],
+  "students": [
+    {
+      "id": "pg1",
+      "student": "Mrunalini Bhavasar",
+      "title": "Design analysis and weight optimization of lift panel by using composite structure",
+      "year": 2022,
+      "level": "PG"
+    },
+    {
+      "id": "pg2",
+      "student": "Mr. Vikrant Deshmukh",
+      "title": "Design And Weight Optimization Of 4 Wheeler Differential Case Using FEA And UTM Strain Gauge Technique",
+      "year": 2021,
+      "level": "PG"
+    },
+    {
+      "id": "pg3",
+      "student": "Mr. More Mayuresh Mrityunjay",
+      "title": "Buckling Analysis of Rectangular Plate",
+      "year": 2021,
+      "level": "PG"
+    },
+    {
+      "id": "pg4",
+      "student": "Mr. Manu Panickar",
+      "title": "Design & Analysis of Multiple Operational Tool Holder with Plain Drilling & Boring",
+      "year": 2019,
+      "level": "PG"
+    },
+    {
+      "id": "pg5",
+      "student": "Mrs. Soniya Bhagat",
+      "title": "Experimental and CFD Simulation for Improvement in Inlet Duct Design for Existing Centrifugal Compressor",
+      "year": 2020,
+      "level": "PG"
+    },
+    {
+      "id": "pg6",
+      "student": "Mr. Ganesh B. Rathod",
+      "title": "Experimental Investigation on Cyclone Separator Performance using CFD Simulation",
+      "year": 2020,
+      "level": "PG"
+    },
+    {
+      "id": "pg7",
+      "student": "Mr. Akshay Shenkar",
+      "title": "Heat Exchanger Based on Nanofluids",
+      "year": 2019,
+      "level": "PG"
+    },
+    {
+      "id": "pg8",
+      "student": "Miss. Arati Sugandha Jadhav",
+      "title": "Effect of Pin Fin Geometry on Performance of Heat Sink",
+      "year": 2019,
+      "level": "PG"
+    },
+    {
+      "id": "pg9",
+      "student": "Mr. Akshay Eknath Kharat",
+      "title": "Replacement of R134a in a Domestic Refrigerator With Alternative Refrigerant",
+      "year": 2018,
+      "level": "PG"
+    },
+    {
+      "id": "pg10",
+      "student": "Mr. Saurabh Avhad",
+      "title": "Experimental Based Evaluation and Compare Heat Transfer Rate Change in Tapper Angle",
+      "year": 2018,
+      "level": "PG"
+    },
+    {
+      "id": "pg11",
+      "student": "Mr. Nilesh Bandu Sanap",
+      "title": "Design, Analysis and Performance Evaluation of Hybrid Exhaust Gas Heat Recovery Device",
+      "year": 2017,
+      "level": "PG"
+    },
+    {
+      "id": "pg12",
+      "student": "Mr. Yogesh Gagada",
+      "title": "Design & Analysis of Fluoropolymer Helical Coil Tube in Tube Heat Exchanger",
+      "year": 2017,
+      "level": "PG"
+    },
+    {
+      "id": "pg13",
+      "student": "Miss. Vrushali Suhas Wable",
+      "title": "An Investigation Study of Spur Gear for Pitting Failure",
+      "year": 2016,
+      "level": "PG"
+    },
+    {
+      "id": "pg14",
+      "student": "Mr. Vikram Raut",
+      "title": "A Study of Artificial Fiber Tissue using Finite Element Analysis for Optimizing Volumetric",
+      "year": 2016,
+      "level": "PG"
+    },
+    {
+      "id": "pg15",
+      "student": "Miss. Shubhangi G. Varpe",
+      "title": "Comparative Analysis of Tribological Behavior of PTFE Composite with Different Filler Material",
+      "year": 2015,
+      "level": "PG"
+    },
+    {
+      "id": "pg16",
+      "student": "Mr. Kaustubh G. Sontakke",
+      "title": "Design, Fabrication and Analysis of Drilling cum Riveting Machine",
+      "year": 2014,
+      "level": "PG"
+    },
+    {
+      "id": "pg17",
+      "student": "Mr. Sachin R. Jayswal",
+      "title": "Design, Fabrication and Analysis of Bent Pin Mechanism",
+      "year": 2014,
+      "level": "PG"
+    },
+    {
+      "id": "pg18",
+      "student": "Mr. Mukesh Nimje",
+      "title": "Development of Multi Nozzle Fertilizer Sprayer Pump",
+      "year": 2014,
+      "level": "PG"
+    },
+    {
+      "id": "pg19",
+      "student": "Mr. Rahul Verghane",
+      "title": "Synthesis and Design of Crop Cutting Machine",
+      "year": 2014,
+      "level": "PG"
+    },
+    {
+      "id": "pg20",
+      "student": "Mr. Ravindra Dharapure",
+      "title": "Study and Analysis of Pin of Knuckle Joint in Train",
+      "year": 2014,
+      "level": "PG"
+    },
+    {
+      "id": "pg21",
+      "student": "Mr. Pratik Lande",
+      "title": "Design and Development of Efficient Animal Driven Vehicle",
+      "year": 2013,
+      "level": "PG"
+    },
+    {
+      "id": "pg22",
+      "student": "Mr. A. B. Khedkar",
+      "title": "Design of Plant Rotary Puddler",
+      "year": 2012,
+      "level": "PG"
+    },
+    {
+      "id": "pg23",
+      "student": "Mr. D. N. Nandgaye",
+      "title": "Analysis of Response of An Epicyclic Gear Train",
+      "year": 2010,
+      "level": "PG"
+    }
+  ],
+  "researchThemes": [
+    {
+      "id": "theme-1",
+      "name": "Manufacturing & Machining"
+    },
+    {
+      "id": "theme-2",
+      "name": "Surface Engineering"
+    },
+    {
+      "id": "theme-3",
+      "name": "Material Science"
+    },
+    {
+      "id": "theme-4",
+      "name": "Heat Transfer"
+    },
+    {
+      "id": "theme-5",
+      "name": "CFD & Simulation"
+    },
+    {
+      "id": "theme-6",
+      "name": "Mechanical Design"
+    },
+    {
+      "id": "theme-7",
+      "name": "Renewable Energy"
+    },
+    {
+      "id": "theme-8",
+      "name": "Thermal Engineering"
+    }
+  ]
+}

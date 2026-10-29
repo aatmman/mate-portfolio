@@ -1,7 +1,31 @@
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { awards, memberships, editorialRoles, conferencesOrganized, extraCurricular } from '@/data/achievements';
+import { 
+  awards as defaultAwards, 
+  memberships as defaultMemberships, 
+  editorialRoles as defaultEditorial, 
+  conferencesOrganized as defaultConferences, 
+  extraCurricular as defaultExtra 
+} from '@/data/achievements';
 
-export default function Achievements() {
+export default function Achievements({
+  awardsData,
+  membershipsData,
+  editorialData,
+  conferencesData,
+  extraData,
+}: {
+  awardsData?: typeof defaultAwards;
+  membershipsData?: typeof defaultMemberships;
+  editorialData?: typeof defaultEditorial;
+  conferencesData?: typeof defaultConferences;
+  extraData?: typeof defaultExtra;
+} = {}) {
+  const pAwards = awardsData || defaultAwards;
+  const pMemberships = membershipsData || defaultMemberships;
+  const pEditorial = editorialData || defaultEditorial;
+  const pConferences = conferencesData || defaultConferences;
+  const pExtra = extraData || defaultExtra;
+
   return (
     <div>
       {/* Awards */}
@@ -12,7 +36,7 @@ export default function Achievements() {
       </ScrollReveal>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.25rem', marginTop: '2rem' }}>
-        {awards.map((a, i) => (
+        {pAwards.map((a, i) => (
           <ScrollReveal key={a.id} delay={(Math.min(i % 4, 3) as 0|1|2|3)}>
             <div className={`cert-card paper-lift ${a.highlight ? 'paper-deep' : 'paper'}`} style={{ height: '100%' }}>
               {a.highlight && (
@@ -49,7 +73,7 @@ export default function Achievements() {
           <div className="divider" />
         </ScrollReveal>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem', marginTop: '1.75rem' }}>
-          {memberships.map((m, i) => (
+          {pMemberships.map((m, i) => (
             <ScrollReveal key={m.id} delay={(Math.min(i % 4, 3) as 0|1|2|3)}>
               <div className="paper paper-lift" style={{ padding: '1.25rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                 <div style={{
@@ -60,13 +84,13 @@ export default function Achievements() {
                   flexShrink: 0,
                 }}>
                   <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', fontWeight: 700, color: 'var(--steel)', letterSpacing: '0.04em', textAlign: 'center', lineHeight: 1.2 }}>
-                    {m.abbreviation}
+                    {(m as any).abbreviation || (m as any).organization?.slice(0, 4).toUpperCase()}
                   </span>
                 </div>
                 <div>
                   <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '0.875rem', color: 'var(--graphite)', lineHeight: 1.3 }}>{m.organization}</p>
-                  <p className="t-meta" style={{ marginTop: '0.25rem' }}>{m.membershipType}</p>
-                  {m.membershipNo && <p className="t-meta">No. {m.membershipNo}</p>}
+                  <p className="t-meta" style={{ marginTop: '0.25rem' }}>{(m as any).membershipType || (m as any).grade || ''}</p>
+                  {((m as any).membershipNo || (m as any).memberId) && <p className="t-meta">No. {(m as any).membershipNo || (m as any).memberId}</p>}
                 </div>
               </div>
             </ScrollReveal>
@@ -82,7 +106,7 @@ export default function Achievements() {
           <div className="divider" />
         </ScrollReveal>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginTop: '1.75rem' }}>
-          {editorialRoles.map((e, i) => (
+          {pEditorial.map((e, i) => (
             <ScrollReveal key={e.id} delay={(Math.min(i % 4, 3) as 0|1|2|3)}>
               <div className="journal-card" style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
                 <div style={{
@@ -93,7 +117,7 @@ export default function Achievements() {
                   color: 'var(--brass)',
                   minWidth: 80,
                 }}>
-                  {e.abbreviation}
+                  {(e as any).abbreviation || (e as any).journal?.slice(0, 6).toUpperCase()}
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--graphite)', lineHeight: 1.35 }}>{e.journal}</p>
@@ -126,7 +150,7 @@ export default function Achievements() {
           <div className="divider" />
         </ScrollReveal>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.75rem' }}>
-          {conferencesOrganized.map((c, i) => (
+          {pConferences.map((c, i) => (
             <ScrollReveal key={c.id} delay={(Math.min(i, 3) as 0|1|2|3)}>
               <div className="paper" style={{ padding: '1.1rem 1.35rem', display: 'flex', gap: '1rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
                 <div style={{
@@ -147,10 +171,10 @@ export default function Achievements() {
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <p style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: '0.9rem', color: 'var(--graphite)', lineHeight: 1.4 }}>{c.title}</p>
                   <p className="t-meta" style={{ marginTop: '0.25rem' }}>
-                    {[c.location, c.association].filter(Boolean).join(' · ')}
+                    {(c as any).institution || [(c as any).location, (c as any).association].filter(Boolean).join(' · ')}
                   </p>
                 </div>
-                <p className="t-meta" style={{ whiteSpace: 'nowrap', flexShrink: 0, color: 'var(--terracotta)' }}>{c.date}</p>
+                <p className="t-meta" style={{ whiteSpace: 'nowrap', flexShrink: 0, color: 'var(--terracotta)' }}>{(c as any).dates || (c as any).date || ''}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -165,7 +189,7 @@ export default function Achievements() {
           <div className="divider" />
         </ScrollReveal>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '1.5rem' }}>
-          {extraCurricular.map((e, i) => (
+          {pExtra.map((e, i) => (
             <ScrollReveal key={e.id} delay={(i as 0|1|2)}>
               <div className="paper" style={{ padding: '1rem 1.25rem', maxWidth: 320 }}>
                 <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '0.875rem', color: 'var(--graphite)', marginBottom: '0.35rem' }}>{e.activity}</p>

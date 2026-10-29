@@ -1,7 +1,9 @@
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { profile } from '@/data/profile';
+import { profile as defaultProfile } from '@/data/profile';
 
-export default function Contact() {
+export default function Contact({ profileData }: { profileData?: typeof defaultProfile } = {}) {
+  const p = profileData || defaultProfile;
+
   return (
     <section id="contact" className="section">
       <div className="section-inner">
@@ -20,12 +22,12 @@ export default function Contact() {
 
               <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
                 <p style={{ fontFamily: 'var(--font-editorial)', fontSize: '1.8rem', color: 'var(--graphite)', lineHeight: 1.2 }}>
-                  {profile.name}
+                  {p.name}
                 </p>
-                <p className="t-eyebrow" style={{ marginTop: '0.5rem' }}>{profile.title}</p>
-                <p className="t-small" style={{ marginTop: '0.25rem' }}>{profile.department}</p>
-                <p className="t-small">{profile.institution}</p>
-                <p className="t-meta" style={{ marginTop: '0.15rem' }}>{profile.location}</p>
+                <p className="t-eyebrow" style={{ marginTop: '0.5rem' }}>{p.title}</p>
+                <p className="t-small" style={{ marginTop: '0.25rem' }}>{p.department}</p>
+                <p className="t-small">{p.institution}</p>
+                <p className="t-meta" style={{ marginTop: '0.15rem' }}>{p.location}</p>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
@@ -42,7 +44,7 @@ export default function Contact() {
                   </div>
                   <p className="t-meta" style={{ color: 'var(--brass)', marginBottom: '0.25rem' }}>Email</p>
                   <a
-                    href={`mailto:${profile.email}`}
+                    href={`mailto:${p.email}`}
                     style={{
                       fontFamily: 'var(--font-mono)',
                       fontSize: '0.8rem',
@@ -52,7 +54,7 @@ export default function Contact() {
                       paddingBottom: '0.1rem',
                     }}
                   >
-                    {profile.email}
+                    {p.email}
                   </a>
                 </div>
 
@@ -69,7 +71,7 @@ export default function Contact() {
                   </div>
                   <p className="t-meta" style={{ color: 'var(--brass)', marginBottom: '0.25rem' }}>Phone</p>
                   <a
-                    href={`tel:${profile.phone.replace(/\s/g, '')}`}
+                    href={`tel:${p.phone.replace(/\s/g, '')}`}
                     style={{
                       fontFamily: 'var(--font-mono)',
                       fontSize: '0.8rem',
@@ -77,13 +79,13 @@ export default function Contact() {
                       textDecoration: 'none',
                     }}
                   >
-                    {profile.phone}
+                    {p.phone}
                   </a>
                 </div>
               </div>
 
               <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px dashed rgba(180,154,103,0.25)', textAlign: 'center' }}>
-                <a href={`mailto:${profile.email}`} className="btn btn-primary">
+                <a href={`mailto:${p.email}`} className="btn btn-primary">
                   Send an Email
                 </a>
               </div>

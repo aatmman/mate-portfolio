@@ -50,7 +50,9 @@ function StatItem({ number, label, delay }: { number: string; label: string; del
   );
 }
 
-export default function ProfessionalSnapshot() {
+export default function ProfessionalSnapshot({ profileData }: { profileData?: typeof profile }) {
+  const p = profileData || profile;
+
   return (
     <section className="section" style={{ padding: '3.5rem 0' }}>
       <div className="section-inner">
@@ -69,14 +71,14 @@ export default function ProfessionalSnapshot() {
           }} />
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 0 }}>
-            {profile.stats.map((s, i) => (
-              <div key={i} style={{ borderRight: i < profile.stats.length - 1 ? '1px solid rgba(96,121,132,0.10)' : 'none' }}>
+            {p.stats.map((s, i) => (
+              <div key={i} style={{ borderRight: i < p.stats.length - 1 ? '1px solid rgba(96,121,132,0.10)' : 'none' }}>
                 <StatItem number={s.number} label={s.label} delay={i} />
               </div>
             ))}
           </div>
           <p className="t-meta" style={{ textAlign: 'center', padding: '0.5rem 1rem 1rem', opacity: 0.7 }}>
-            * {profile.statsNote}
+            * {p.statsNote}
           </p>
         </div>
       </div>

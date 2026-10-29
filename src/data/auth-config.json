@@ -1,0 +1,16 @@
+{
+  "id": "admin-1",
+  "username": "drmate",
+  "email": "dr.mate@dnyaneshwarmate.com",
+  "allowedEmails": [
+    "dr.mate@dnyaneshwarmate.com",
+    "prof.mate@dnyaneshwarmate.com",
+    "admin@dnyaneshwarmate.com",
+    "dnyaneshwarmate@gmail.com"
+  ],
+  "name": "Dr. Dnyaneshwar M. Mate",
+  "passwordHash": "5ccb4b5a28fcc5fe09c77a32689a0a62:254052eac783455be16eb080a601eb75b0c3b97d9f2e662de54605aee7cbe1df",
+  "role": "admin",
+  "createdAt": "2026-10-29T20:09:38.656Z",
+  "updatedAt": "2026-10-29T20:32:51.974Z"
+}

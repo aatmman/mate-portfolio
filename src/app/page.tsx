@@ -13,8 +13,13 @@ import Publications from '@/components/sections/Publications';
 import StudentsGuided from '@/components/sections/StudentsGuided';
 import Achievements from '@/components/sections/Achievements';
 import Contact from '@/components/sections/Contact';
+import { getPortfolioData } from '@/lib/content';
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+
+export default async function Home() {
+  const data = await getPortfolioData();
+
   return (
     <>
       <EngineeringBackground />
@@ -22,9 +27,9 @@ export default function Home() {
 
       <div className="content">
         {/* ── HOME ─────────────────────────────────────────── */}
-        <Hero />
-        <ProfessionalSnapshot />
-        <CurrentPosition />
+        <Hero profileData={data.profile} />
+        <ProfessionalSnapshot profileData={data.profile} />
+        <CurrentPosition profileData={data.profile} />
 
         {/* ── ACADEMICS & EXPERIENCE ───────────────────────── */}
         <section id="academics" className="section">
@@ -45,12 +50,12 @@ export default function Home() {
               <h2 className="t-section-heading">Academics &amp; Experience</h2>
             </div>
 
-            <Education />
+            <Education data={data.education} />
             <div className="divider--full" />
-            <AcademicCareer />
+            <AcademicCareer data={data.experience} />
             <div className="divider--full" />
-            <AdminExperience />
-            <CoursesArchive />
+            <AdminExperience adminData={data.adminExperience} contribData={data.academicContributions} />
+            <CoursesArchive data={data.courses} />
           </div>
         </section>
 
@@ -73,11 +78,17 @@ export default function Home() {
               <h2 className="t-section-heading">Research &amp; Publications</h2>
             </div>
 
-            <ResearchOverview />
+            <ResearchOverview 
+              profileData={data.profile}
+              patentsData={data.patents}
+              grantData={data.researchGrant}
+              consultancyData={data.consultancy}
+              booksData={data.books}
+            />
             <div className="divider--full" />
-            <Publications />
+            <Publications data={data.publications} confData={data.conferencePapers} />
             <div className="divider--full" />
-            <StudentsGuided />
+            <StudentsGuided data={data.students} />
           </div>
         </section>
 
@@ -99,12 +110,18 @@ export default function Home() {
               </div>
               <h2 className="t-section-heading">Achievements</h2>
             </div>
-            <Achievements />
+            <Achievements 
+              awardsData={data.awards}
+              membershipsData={data.memberships}
+              editorialData={data.editorialRoles}
+              conferencesData={data.conferencesOrganized}
+              extraData={data.extraCurricular}
+            />
           </div>
         </section>
 
         {/* ── CONTACT ──────────────────────────────────────── */}
-        <Contact />
+        <Contact profileData={data.profile} />
 
         <Footer />
       </div>

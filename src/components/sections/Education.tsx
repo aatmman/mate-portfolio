@@ -1,7 +1,9 @@
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { education } from '@/data/education';
+import { education as defaultEducation, Degree } from '@/data/education';
 
-export default function Education() {
+export default function Education({ data }: { data?: Degree[] }) {
+  const items = data || defaultEducation;
+
   return (
     <div>
       <ScrollReveal>
@@ -11,7 +13,7 @@ export default function Education() {
       </ScrollReveal>
 
       <div className="timeline" style={{ marginTop: '2.5rem' }}>
-        {education.map((deg, i) => (
+        {items.map((deg, i) => (
           <ScrollReveal key={deg.id} delay={(Math.min(i, 4) as 0|1|2|3|4)} direction="left">
             <div className="timeline-item">
               <div className={`timeline-dot ${deg.highlight ? '' : 'timeline-dot--steel'}`} />

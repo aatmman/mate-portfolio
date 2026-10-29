@@ -1,5 +1,6 @@
 'use client';
 import { ReactNode, useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { Menu, X, Bell, Moon, Sun, HelpCircle, UserCog, LogOut } from '@/components/ui/Icons';
 import AdminSidebar from './AdminSidebar';
@@ -12,14 +13,26 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
   const router = useRouter();
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
 
+  // Auto-close mobile sidebar on route change
   useEffect(() => {
-    const saved = localStorage.getItem('admin-dark-mode');
-    if (saved) {
-      setDarkMode(saved === 'true');
-      document.documentElement.classList.toggle('dark', saved === 'true');
+    setSidebarOpen(false);
+    setShowUserMenu(false);
+  }, [pathname]);
+
+  // Load preferences from localStorage
+  useEffect(() => {
+    const savedDark = localStorage.getItem('admin-dark-mode');
+    if (savedDark) {
+      setDarkMode(savedDark === 'true');
+      document.documentElement.classList.toggle('dark', savedDark === 'true');
+    }
+    const savedCollapsed = localStorage.getItem('admin-sidebar-collapsed');
+    if (savedCollapsed) {
+      setSidebarCollapsed(savedCollapsed === 'true');
     }
   }, []);
 
@@ -30,76 +43,95 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     document.documentElement.classList.toggle('dark', newMode);
   };
 
+  const toggleSidebarCollapse = () => {
+    const next = !sidebarCollapsed;
+    setSidebarCollapsed(next);
+    localStorage.setItem('admin-sidebar-collapsed', String(next));
+  };
+
   const handleLogout = () => {
     fetch('/api/auth/logout', { method: 'POST' }).then(() => {
-      router.push('/admin/login');
+      router.push('/admin/login?logout=true');
       router.refresh();
     });
   };
 
   return (
     <div className="admin-layout">
-      <AdminSidebar />
-      
-      <header className="admin-header">
-        <button 
-          className="mobile-menu-toggle" 
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-          aria-label="Toggle menu"
-        >
-          {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-        
-        <div className="header-title">
-          <h1>{getPageTitle(pathname)}</h1>
-        </div>
-        
-        <div className="header-actions">
-          <button className="icon-btn" onClick={toggleDarkMode} aria-label="Toggle dark mode">
-            {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </button>
-          
-          <button className="icon-btn" aria-label="Notifications">
-            <Bell className="w-5 h-5" />
-            <span className="notification-badge">3</span>
-          </button>
-          
-          <div className="user-menu-wrapper">
+      <AdminSidebar
+        collapsed={sidebarCollapsed}
+        onToggleCollapse={toggleSidebarCollapse}
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
+
+      <div className={`admin-wrapper ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
+        <header className="admin-header">
+          <div className="admin-header-left">
             <button 
-              className="user-menu-trigger"
-              onClick={() => setShowUserMenu(!showUserMenu)}
-              aria-expanded={showUserMenu}
+              className="mobile-menu-toggle" 
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              aria-label="Toggle navigation menu"
             >
-              <div className="user-avatar">DM</div>
+              {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
-            {showUserMenu && (
-              <div className="user-dropdown">
-                <Link href="/admin/profile/basic" className="dropdown-item">
-                  <UserCog className="w-4 h-4" />
-                  Profile Settings
-                </Link>
-                <Link href="/admin/settings" className="dropdown-item">
-                  <HelpCircle className="w-4 h-4" />
-                  Settings
-                </Link>
-                <hr />
-                <button className="dropdown-item logout" onClick={handleLogout}>
-                  <LogOut className="w-4 h-4" />
-                  Logout
-                </button>
-              </div>
-            )}
+            
+            <div className="header-title">
+              <h1>{getPageTitle(pathname)}</h1>
+            </div>
           </div>
-        </div>
-      </header>
-      
-      <main className="admin-main">
-        {children}
-      </main>
+          
+          <div className="header-actions">
+            <button className="icon-btn" onClick={toggleDarkMode} aria-label="Toggle dark mode" title="Toggle dark mode">
+              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
+
+            <Link href="/" target="_blank" className="icon-btn" title="View live portfolio site" aria-label="View live website">
+              <HelpCircle className="w-5 h-5" />
+            </Link>
+            
+            <div className="user-menu-wrapper">
+              <button 
+                className="user-menu-trigger"
+                onClick={() => setShowUserMenu(!showUserMenu)}
+                aria-expanded={showUserMenu}
+                aria-label="User menu"
+              >
+                <div className="user-avatar">DM</div>
+              </button>
+              {showUserMenu && (
+                <div className="user-dropdown">
+                  <div style={{ padding: '0.625rem 0.875rem', borderBottom: '1px solid rgba(96, 121, 132, 0.12)' }}>
+                    <div style={{ fontWeight: 600, fontSize: '0.8125rem', color: 'var(--graphite)' }}>Dr. D. M. Mate</div>
+                    <div style={{ fontSize: '0.6875rem', color: 'var(--steel)' }}>Mechanical Eng. Dept.</div>
+                  </div>
+                  <Link href="/admin/profile/basic" className="dropdown-item" onClick={() => setShowUserMenu(false)}>
+                    <UserCog className="w-4 h-4" />
+                    Profile Details
+                  </Link>
+                  <Link href="/admin/settings" className="dropdown-item" onClick={() => setShowUserMenu(false)}>
+                    <HelpCircle className="w-4 h-4" />
+                    Settings &amp; Backup
+                  </Link>
+                  <hr />
+                  <button className="dropdown-item logout" onClick={handleLogout}>
+                    <LogOut className="w-4 h-4" />
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </header>
+        
+        <main className="admin-main">
+          {children}
+        </main>
+      </div>
       
       {sidebarOpen && (
         <div 
-          className="sidebar-overlay" 
+          className="sidebar-overlay visible" 
           onClick={() => setSidebarOpen(false)}
           aria-hidden="true"
         />

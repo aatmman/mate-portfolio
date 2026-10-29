@@ -1,13 +1,14 @@
 'use client';
 import { useState } from 'react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { students } from '@/data/achievements';
+import { students as defaultStudents, StudentProject } from '@/data/achievements';
 
-export default function StudentsGuided() {
+export default function StudentsGuided({ data }: { data?: StudentProject[] }) {
+  const items = data || defaultStudents;
   const [query, setQuery] = useState('');
   const [showAll, setShowAll] = useState(false);
 
-  const filtered = students.filter((s) =>
+  const filtered = items.filter((s) =>
     !query ||
     s.student.toLowerCase().includes(query.toLowerCase()) ||
     s.title.toLowerCase().includes(query.toLowerCase())

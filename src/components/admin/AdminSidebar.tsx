@@ -60,10 +60,32 @@ const navigation = [
   { name: 'Settings', href: '/admin/settings', icon: Settings },
 ];
 
-export default function AdminSidebar() {
+interface AdminSidebarProps {
+  collapsed?: boolean;
+  onToggleCollapse?: () => void;
+  isOpen?: boolean;
+  onClose?: () => void;
+}
+
+export default function AdminSidebar({
+  collapsed: controlledCollapsed,
+  onToggleCollapse,
+  isOpen = false,
+  onClose,
+}: AdminSidebarProps = {}) {
   const pathname = usePathname();
   const [openSections, setOpenSections] = useState<string[]>([]);
-  const [collapsed, setCollapsed] = useState(false);
+  const [internalCollapsed, setInternalCollapsed] = useState(false);
+
+  const isCollapsed = controlledCollapsed !== undefined ? controlledCollapsed : internalCollapsed;
+
+  const handleToggleCollapse = () => {
+    if (onToggleCollapse) {
+      onToggleCollapse();
+    } else {
+      setInternalCollapsed(!internalCollapsed);
+    }
+  };
 
   const toggleSection = (sectionName: string) => {
     setOpenSections(prev => 
@@ -76,9 +98,9 @@ export default function AdminSidebar() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/');
 
   return (
-    <aside className={`admin-sidebar ${collapsed ? 'collapsed' : ''}`} aria-label="Admin navigation">
+    <aside className={`admin-sidebar ${isCollapsed ? 'collapsed' : ''} ${isOpen ? 'open' : ''}`} aria-label="Admin navigation">
       <div className="sidebar-header">
-        {!collapsed && (
+        {!isCollapsed && (
           <div className="sidebar-brand">
             <div className="brand-icon">
               <Shield className="w-6 h-6" />
@@ -88,10 +110,11 @@ export default function AdminSidebar() {
         )}
         <button
           className="collapse-toggle"
-          onClick={() => setCollapsed(!collapsed)}
-          aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+          onClick={handleToggleCollapse}
+          aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+          title={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
         >
-          {collapsed ? <ChevronRight className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+          {isCollapsed ? <ChevronRight className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
         </button>
       </div>
 
@@ -111,10 +134,10 @@ export default function AdminSidebar() {
                   toggleSection(item.name!);
                 }}>
                   <item.icon className="w-5 h-5" />
-                  {!collapsed && <span>{item.name}</span>}
-                  {!collapsed && <ChevronDown className={`w-4 h-4 ${isOpen ? 'rotate-180' : ''}`} />}
+                  {!isCollapsed && <span>{item.name}</span>}
+                  {!isCollapsed && <ChevronDown className={`w-4 h-4 ${isOpen ? 'rotate-180' : ''}`} />}
                 </summary>
-                {!collapsed && (
+                {!isCollapsed && (
                   <ul className="nav-submenu">
                     {item.children!.map((child) => (
                       <li key={child.name}>
@@ -139,14 +162,14 @@ export default function AdminSidebar() {
               className={`nav-link ${active ? 'active' : ''}`}
             >
               <item.icon className="w-5 h-5" />
-              {!collapsed && <span>{item.name}</span>}
+              {!isCollapsed && <span>{item.name}</span>}
             </Link>
           );
         })}
       </nav>
 
       <div className="sidebar-footer">
-        {!collapsed && (
+        {!isCollapsed && (
           <div className="user-info">
             <div className="user-avatar">
               <User className="w-5 h-5" />
@@ -159,7 +182,7 @@ export default function AdminSidebar() {
         )}
         <Link href="/admin/login?logout=true" className="logout-link">
           <LogOut className="w-5 h-5" />
-          {!collapsed && <span>Logout</span>}
+          {!isCollapsed && <span>Logout</span>}
         </Link>
       </div>
     </aside>

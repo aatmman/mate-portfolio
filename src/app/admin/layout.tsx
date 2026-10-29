@@ -1,28 +1,22 @@
 import { Metadata } from 'next';
-import { redirect } from 'next/navigation';
-import { getSession, requireAdmin } from '@/lib/auth';
-import AdminLayout from '@/components/admin/AdminLayout';
 import './admin.css';
 
 export const metadata: Metadata = {
   title: 'Admin Portal - Dr. Dnyaneshwar M. Mate',
   description: 'Admin dashboard for managing academic portfolio',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
 };
 
-export default async function AdminRootLayout({
+export default function AdminRootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getSession();
-  
-  if (!session) {
-    redirect('/admin/login');
-  }
-
-  return (
-    <AdminLayout>
-      {children}
-    </AdminLayout>
-  );
+  return <>{children}</>;
 }

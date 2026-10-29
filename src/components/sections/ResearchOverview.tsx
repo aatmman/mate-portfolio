@@ -1,9 +1,27 @@
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { profile } from '@/data/profile';
-import { patents, researchGrant, consultancy } from '@/data/patents';
-import { books } from '@/data/achievements';
+import { profile as defaultProfile } from '@/data/profile';
+import { patents as defaultPatents, researchGrant as defaultGrant, consultancy as defaultConsultancy } from '@/data/patents';
+import { books as defaultBooks } from '@/data/achievements';
 
-export default function ResearchOverview() {
+export default function ResearchOverview({
+  profileData,
+  patentsData,
+  grantData,
+  consultancyData,
+  booksData,
+}: {
+  profileData?: typeof defaultProfile;
+  patentsData?: typeof defaultPatents;
+  grantData?: typeof defaultGrant;
+  consultancyData?: typeof defaultConsultancy;
+  booksData?: typeof defaultBooks;
+} = {}) {
+  const pProfile = profileData || defaultProfile;
+  const pPatents = patentsData || defaultPatents;
+  const pGrant = grantData || defaultGrant;
+  const pConsultancy = consultancyData || defaultConsultancy;
+  const pBooks = booksData || defaultBooks;
+
   return (
     <div>
       {/* Research Profile Header */}
@@ -23,7 +41,7 @@ export default function ResearchOverview() {
 
       {/* Research theme tags */}
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.65rem', marginTop: '1.75rem' }}>
-        {profile.researchThemes.map((theme, i) => (
+        {pProfile.researchThemes.map((theme, i) => (
           <ScrollReveal key={theme} delay={(Math.min(i, 5) as 0|1|2|3|4|5)}>
             <span style={{
               fontFamily: 'var(--font-mono)',
@@ -51,7 +69,7 @@ export default function ResearchOverview() {
         </ScrollReveal>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
-          {patents.map((p, i) => (
+          {pPatents.map((p, i) => (
             <ScrollReveal key={p.id} delay={(i as 0|1)}>
               <div className="patent-card" style={{ height: '100%', position: 'relative' }}>
                 <div className="blueprint-corner blueprint-corner--tl" />
@@ -93,12 +111,12 @@ export default function ResearchOverview() {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
               <div>
                 <p className="t-label" style={{ marginBottom: '0.5rem' }}>AICTE Research Grant</p>
-                <p className="t-subsection" style={{ marginBottom: '0.5rem' }}>{researchGrant.title}</p>
-                <p className="t-body" style={{ maxWidth: 450 }}>{researchGrant.description}</p>
+                <p className="t-subsection" style={{ marginBottom: '0.5rem' }}>{pGrant.title}</p>
+                <p className="t-body" style={{ maxWidth: 450 }}>{pGrant.description}</p>
               </div>
               <div style={{ textAlign: 'right' }}>
                 <p style={{ fontFamily: 'var(--font-editorial)', fontSize: '2.5rem', color: 'var(--terracotta)', lineHeight: 1 }}>
-                  {researchGrant.amountFormatted}
+                  {pGrant.amountFormatted || pGrant.amount}
                 </p>
                 <p className="t-meta">Research Grant</p>
               </div>
@@ -106,15 +124,15 @@ export default function ResearchOverview() {
             <div style={{ marginTop: '1.25rem', paddingTop: '1.25rem', borderTop: '1px dashed rgba(180,154,103,0.3)', display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
               <div>
                 <p className="t-meta" style={{ color: 'var(--brass)' }}>Sponsor</p>
-                <p className="t-small" style={{ fontWeight: 500 }}>{researchGrant.sponsor}</p>
+                <p className="t-small" style={{ fontWeight: 500 }}>{pGrant.sponsor}</p>
               </div>
               <div>
                 <p className="t-meta" style={{ color: 'var(--brass)' }}>File No.</p>
-                <p className="t-small" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem' }}>{researchGrant.fileNo}</p>
+                <p className="t-small" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem' }}>{pGrant.fileNo}</p>
               </div>
               <div>
                 <p className="t-meta" style={{ color: 'var(--brass)' }}>Date</p>
-                <p className="t-small">{researchGrant.date}</p>
+                <p className="t-small">{pGrant.date}</p>
               </div>
             </div>
           </div>
@@ -130,7 +148,7 @@ export default function ResearchOverview() {
         </ScrollReveal>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem', marginTop: '2rem' }}>
-          {consultancy.map((c, i) => (
+          {pConsultancy.map((c, i) => (
             <ScrollReveal key={c.id} delay={(i as 0|1|2)}>
               <div className="paper paper-lift" style={{ padding: '1.5rem', height: '100%', borderTop: '3px solid var(--steel)' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
@@ -160,7 +178,7 @@ export default function ResearchOverview() {
         </ScrollReveal>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '1.5rem', marginTop: '2rem' }}>
-          {books.map((b, i) => (
+          {pBooks.map((b, i) => (
             <ScrollReveal key={b.id} delay={(i as 0|1|2|3)}>
               <div
                 className="book-spine"

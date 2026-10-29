@@ -282,7 +282,15 @@ export const extraCurricular = [
   },
 ];
 
-export const students = [
+export interface StudentProject {
+  id: string;
+  student: string;
+  title: string;
+  year: number;
+  level: string;
+}
+
+export const students: StudentProject[] = [
   { id: "pg1",  student: "Mrunalini Bhavasar", title: "Design analysis and weight optimization of lift panel by using composite structure", year: 2022, level: "PG" },
   { id: "pg2",  student: "Mr. Vikrant Deshmukh", title: "Design And Weight Optimization Of 4 Wheeler Differential Case Using FEA And UTM Strain Gauge Technique", year: 2021, level: "PG" },
   { id: "pg3",  student: "Mr. More Mayuresh Mrityunjay", title: "Buckling Analysis of Rectangular Plate", year: 2021, level: "PG" },

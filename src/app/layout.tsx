@@ -22,6 +22,13 @@ export const metadata: Metadata = {
       "Associate Professor of Mechanical Engineering | 20+ Years | 40+ Publications | Patent Holder",
     type: "website",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

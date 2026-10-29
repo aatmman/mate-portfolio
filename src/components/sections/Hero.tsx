@@ -3,7 +3,9 @@ import Image from 'next/image';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import { profile } from '@/data/profile';
 
-export default function Hero() {
+export default function Hero({ profileData }: { profileData?: typeof profile }) {
+  const p = profileData || profile;
+
   return (
     <section id="home" className="section" style={{ paddingTop: '7rem', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
       <div className="section-inner">
@@ -19,7 +21,7 @@ export default function Hero() {
           <div>
             <ScrollReveal>
               <p className="t-label" style={{ marginBottom: '1.25rem' }}>
-                Associate Professor · Mechanical Engineering
+                {p.title} · {p.department.replace('Department of ', '')}
               </p>
             </ScrollReveal>
 
@@ -33,16 +35,19 @@ export default function Hero() {
                 Hi, I&apos;m
               </p>
               <h1 className="t-hero" style={{ marginBottom: '1.5rem' }}>
-                Dr. Dnyaneshwar<br />M. Mate
+                {p.name.includes(' ') ? (
+                  <>
+                    {p.name.split(' ').slice(0, 2).join(' ')}<br />
+                    {p.name.split(' ').slice(2).join(' ')}
+                  </>
+                ) : p.name}
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delay={2}>
               <div className="divider" />
               <p className="t-body" style={{ maxWidth: '520px', marginBottom: '2rem' }}>
-                Associate Professor in Mechanical Engineering at JSPM&apos;s Rajarshi Shahu College of
-                Engineering, Pune. With over 20 years of teaching and academic experience, my work
-                spans engineering education, research, innovation and mentoring.
+                {p.objective}
               </p>
             </ScrollReveal>
 

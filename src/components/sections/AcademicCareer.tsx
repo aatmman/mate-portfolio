@@ -1,7 +1,9 @@
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { experience } from '@/data/experience';
+import { experience as defaultExperience, Position } from '@/data/experience';
 
-export default function AcademicCareer() {
+export default function AcademicCareer({ data }: { data?: Position[] }) {
+  const items = data || defaultExperience;
+
   return (
     <div>
       <ScrollReveal>
@@ -14,7 +16,7 @@ export default function AcademicCareer() {
       </ScrollReveal>
 
       <div className="timeline" style={{ marginTop: '2.5rem' }}>
-        {experience.map((pos, i) => (
+        {items.map((pos, i) => (
           <ScrollReveal key={pos.id} delay={(Math.min(i, 4) as 0|1|2|3|4)} direction="left">
             <div className="timeline-item">
               <div className={`timeline-dot ${pos.current ? '' : 'timeline-dot--steel'}`} />

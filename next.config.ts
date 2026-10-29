@@ -4,16 +4,9 @@ const nextConfig: NextConfig = {
   images: {
     localPatterns: [
       {
-        pathname: '/assets/**',
-        search: '',
+        pathname: '/**',
       },
     ],
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
 };
 

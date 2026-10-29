@@ -1,12 +1,21 @@
 'use client';
 import { useState, useMemo } from 'react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { publications, conferencePapers } from '@/data/publications';
+import { publications as defaultPubs, conferencePapers as defaultConfs, Publication, ConferencePaper } from '@/data/publications';
 
 const TYPES = ['All', 'Scopus', 'International Journal', 'Conference'];
 const AREAS = ['All', 'Manufacturing & Machining', 'Surface Engineering', 'Heat Transfer', 'CFD & Simulation', 'Material Science', 'Mechanical Design', 'Renewable Energy', 'Thermal Engineering'];
 
-export default function Publications() {
+export default function Publications({ 
+  data, 
+  confData 
+}: { 
+  data?: Publication[]; 
+  confData?: ConferencePaper[]; 
+} = {}) {
+  const pList = data || defaultPubs;
+  const cList = confData || defaultConfs;
+
   const [typeFilter, setTypeFilter] = useState('All');
   const [areaFilter, setAreaFilter] = useState('All');
   const [query, setQuery] = useState('');
@@ -14,7 +23,7 @@ export default function Publications() {
   const [showAll, setShowAll] = useState(false);
 
   const filteredPubs = useMemo(() => {
-    return publications.filter((p) => {
+    return pList.filter((p) => {
       const matchType =
         typeFilter === 'All' ||
         (typeFilter === 'Scopus' && p.type === 'scopus') ||
@@ -24,7 +33,7 @@ export default function Publications() {
       const matchQ = !query || p.title.toLowerCase().includes(query.toLowerCase()) || p.authors.toLowerCase().includes(query.toLowerCase()) || p.journal.toLowerCase().includes(query.toLowerCase());
       return matchType && matchArea && matchQ;
     });
-  }, [typeFilter, areaFilter, query]);
+  }, [pList, typeFilter, areaFilter, query]);
 
   const displayedPubs = showAll ? filteredPubs : filteredPubs.slice(0, 10);
 
@@ -169,7 +178,7 @@ export default function Publications() {
             <div className="divider" />
           </ScrollReveal>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', marginTop: '1.5rem' }}>
-            {conferencePapers.map((p, i) => (
+            {cList.map((p, i) => (
               <ScrollReveal key={p.id} delay={(Math.min(i % 4, 3) as 0|1|2|3)}>
                 <div className="paper" style={{ padding: '1.1rem 1.35rem' }}>
                   <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>

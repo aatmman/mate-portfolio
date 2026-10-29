@@ -1,7 +1,7 @@
 'use client';
 import { useState, useMemo } from 'react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { courses } from '@/data/courses';
+import { courses as defaultCourses, Course } from '@/data/courses';
 
 const CATEGORIES = ['All', 'ATAL FDP', 'Coursera', 'STTP', 'FDP', 'Workshop', 'Online'] as const;
 const CAT_COLORS: Record<string, string> = {
@@ -13,18 +13,19 @@ const CAT_COLORS: Record<string, string> = {
   'Online':    '#26A69A',
 };
 
-export default function CoursesArchive() {
+export default function CoursesArchive({ data }: { data?: Course[] }) {
+  const items = data || defaultCourses;
   const [activeCategory, setActiveCategory] = useState('All');
   const [query, setQuery] = useState('');
   const [showAll, setShowAll] = useState(false);
 
   const filtered = useMemo(() => {
-    return courses.filter((c) => {
+    return items.filter((c) => {
       const matchCat = activeCategory === 'All' || c.category === activeCategory;
       const matchQ = !query || c.title.toLowerCase().includes(query.toLowerCase()) || c.institution?.toLowerCase().includes(query.toLowerCase());
       return matchCat && matchQ;
     });
-  }, [activeCategory, query]);
+  }, [items, activeCategory, query]);
 
   const displayed = showAll ? filtered : filtered.slice(0, 12);
 
